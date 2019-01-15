@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour {
-
-    public Transform Spawnpoint;
-    public GameObject Cube;
-    public KeyCode Ctrl;
+    public Object ObjecttoSpawn;
     void Start ()
     {
        
@@ -14,11 +11,11 @@ public class Spawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update ()
-    {   if (Input.GetKeyDown(Ctrl))
+    {
+        if (Input.GetKeyDown("a"))
         {
-            Instantiate(Cube, Spawnpoint.position, Spawnpoint.rotation);
-            
+            Instantiate(ObjecttoSpawn, transform.position, transform.rotation);
+            print("Object was spawned");
         }
-
     }
 }
