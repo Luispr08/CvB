@@ -22,19 +22,55 @@ public class Spawner1 : MonoBehaviour
         OrangeCube = Resources.Load<GameObject>("Objects/Cubes/OrangeCube");
         GreenCube = Resources.Load<GameObject>("Objects/Cubes/GreenCube");
         PurpleCube = Resources.Load<GameObject>("Objects/Cubes/PurpleCube");
+        int levelup;//This will be used for when the user levels up and another color is added.
     }
 
     // Update is called once per frame
     //LV 1:  Cubes spawn every second.
     void Update()
     {
-
+        
+        
         time += Time.deltaTime;
+        int RanNum = Random.Range(1,7); //Generates a random number between 1 and 7 to choose for the number
         if (time >= 2f) //Hihger this number for less frequency; lower for more frequency
         {
-
-            Instantiate(YellowCube, transform.position, transform.rotation);
-            print("Object was spawned");
+            if (RanNum == 1)
+            {
+                Instantiate(YellowCube, transform.position, transform.rotation);
+                print("Yellow Cube was spawned");
+            }
+            else if (RanNum == 2)
+            {
+                Instantiate(RedCube, transform.position, transform.rotation);
+                print("Red Cube was spawned");
+            }
+            else if (RanNum == 3)
+            {
+                Instantiate(BlueCube, transform.position, transform.rotation);
+                print("Blue Cube was spawned");
+            }
+            else if (RanNum == 4)
+            {
+                Instantiate(PinkCube, transform.position, transform.rotation);
+                print("Pink Cube was spawned");
+            }
+            else if (RanNum == 5)
+            {
+                Instantiate(OrangeCube, transform.position, transform.rotation);
+                print("Orange Cube was spawned");
+            }
+            else if (RanNum == 6)
+            {
+                Instantiate(GreenCube, transform.position, transform.rotation);
+                print("Green Cube was spawned");
+            }
+            else if(RanNum == 7)
+            {
+                Instantiate(PurpleCube, transform.position, transform.rotation);
+                print("Purple was spawned");
+            }
+            
             time = time % 1f; //Same for this number.
         }
 
