@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 65694531747698674}
   - component: {fileID: 54425870272646100}
   - component: {fileID: 3552756390261110740}
+  - component: {fileID: 1722809389715218908}
   m_Layer: 0
   m_Name: BlueCube
   m_TagString: Untagged
@@ -119,5 +120,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6af88b8e574f0a640861e622090dc630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1722809389715218908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052378954935402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ba1345ae72809449a6132a20038cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

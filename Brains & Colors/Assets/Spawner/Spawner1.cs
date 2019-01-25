@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spawner1 : MonoBehaviour
 {
+    public static Spawner1 SP1;
     public GameObject YellowCube;
     public GameObject RedCube;
     public GameObject BlueCube;
@@ -12,6 +13,7 @@ public class Spawner1 : MonoBehaviour
     public GameObject GreenCube;
     public GameObject PurpleCube;
     private float time = 0.0f;
+    public static int S1;
 
     void Start()
     {
@@ -22,19 +24,21 @@ public class Spawner1 : MonoBehaviour
         OrangeCube = Resources.Load<GameObject>("Objects/Cubes/OrangeCube");
         GreenCube = Resources.Load<GameObject>("Objects/Cubes/GreenCube");
         PurpleCube = Resources.Load<GameObject>("Objects/Cubes/PurpleCube");
-        int levelup;//This will be used for when the user levels up and another color is added.
+        //int levelup;//This will be used for when the user levels up and another color is added.
     }
 
     // Update is called once per frame
     //LV 1:  Cubes spawn every second.
-    void Update()
+   void Update()
     {
         
         
         time += Time.deltaTime;
-        int RanNum = Random.Range(1,7); //Generates a random number between 1 and 7 to choose for the number
+        int RanNum = rangen.n1; //Generates a random number between 1 and 7 to choose for the number
         if (time >= 2f) //Hihger this number for less frequency; lower for more frequency
         {
+         //   S1 = RanNum; //Global variable used to choose a random spawned color.
+
             if (RanNum == 1)
             {
                 Instantiate(YellowCube, transform.position, transform.rotation);
@@ -74,6 +78,7 @@ public class Spawner1 : MonoBehaviour
             time = time % 1f; //Same for this number.
         }
 
+      
 
         //Create a function that will spawn the object depending on the score of the player.
         //SCORE OR LEVEL PLAYER FUNCTION.

@@ -11,7 +11,11 @@ public class Spawner : MonoBehaviour {
     public GameObject GreenRectangle;
     public GameObject PurpleRectangle;
     private float time = 0.0f;
+    public bool flag = false;
+    public int C1, C2, C3, C4, C5;
     
+
+
     void Start ()
     {
         YellowRectangle = Resources.Load<GameObject>("Objects/RectangleIdentifiers/YellowIdentifier");
@@ -27,48 +31,70 @@ public class Spawner : MonoBehaviour {
     
 	void Update ()
     {
-        int RanNum = Random.Range(1,7);
+        //This code will choose a color from the cubes spawned in order to slways spawn a color identifier that at least matches one of the spawned cubes.
+        //C1 = Spawner1.S1;
+        //C2 = Spawner2.S2;
+        //C3 = Spawner3.S3;
+        //C4 = Spawner4.S4;
+        //C5 = Spawner5.S5;
+
+        //System.Random r = new System.Random();
+        //var values = new[] { C1, C2, C3, C4, C5 };
+        //int RanNum = values[r.Next(values.Length)];
+
+        if (flag == false)
+        {
+            rangen.rangenerator();
+            flag = true;
+        }
+        
         time += Time.deltaTime;
+        int RanNum = rangen.Ident;
         if (time >= 2f) //This should be only every time the cube with its corresponding color is destroyed.
         {
             if (RanNum == 1)
             {
                 Instantiate(YellowRectangle, transform.position, transform.rotation);
-                print("Yellow Cube was spawned");
+                print("Yellow Rec was spawned");
             }
             else if (RanNum == 2)
             {
                 Instantiate(RedRectangle, transform.position, transform.rotation);
-                print("Red Cube was spawned");
+                print("Red Rec was spawned");
+
             }
             else if (RanNum == 3)
             {
                 Instantiate(BlueRectangle, transform.position, transform.rotation);
-                print("Blue Cube was spawned");
+                print("Blue Rec was spawned");
+                
             }
             else if (RanNum == 4)
             {
                 Instantiate(PinkRectangle, transform.position, transform.rotation);
-                print("Pink Cube was spawned");
+                print("Pink Rec was spawned");
+        
             }
             else if (RanNum == 5)
             {
                 Instantiate(OrangeRectangle, transform.position, transform.rotation);
-                print("Orange Cube was spawned");
+                print("Orange Rec was spawned");
             }
             else if (RanNum == 6)
             {
                 Instantiate(GreenRectangle, transform.position, transform.rotation);
-                print("Green Cube was spawned");
+                print("Green Rec was spawned");
             }
             else if (RanNum == 7)
             {
                 Instantiate(PurpleRectangle, transform.position, transform.rotation);
-                print("Purple Cube was spawned");
+                print("Purple Rec was spawned");
             }
             time = time % 1f; //Same for this number.
+            flag = false;
         }
         
+
 
         //Create a function that will spawn the object depending on the score of the player.
         //SCORE OR LEVEL PLAYER FUNCTION.

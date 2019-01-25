@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spawner4 : MonoBehaviour
 {
+    public static Spawner4 SP4;
     public GameObject YellowCube;
     public GameObject RedCube;
     public GameObject BlueCube;
@@ -12,7 +13,7 @@ public class Spawner4 : MonoBehaviour
     public GameObject GreenCube;
     public GameObject PurpleCube;
     private float time = 0.0f;
-
+    public static int S4;
     void Start()
     {
         YellowCube = Resources.Load<GameObject>("Objects/Cubes/YellowCube");
@@ -30,9 +31,10 @@ public class Spawner4 : MonoBehaviour
     {
 
         time += Time.deltaTime;
-        int RanNum = Random.Range(1, 7); //Generates a random number between 1 and 7 to choose for the number
+        int RanNum = rangen.n4; //Generates a random number between 1 and 7 to choose for the number
         if (time >= 2f) //Hihger this number for less frequency; lower for more frequency
         {
+            //S4 = RanNum;
             if (RanNum == 1)
             {
                 Instantiate(YellowCube, transform.position, transform.rotation);
