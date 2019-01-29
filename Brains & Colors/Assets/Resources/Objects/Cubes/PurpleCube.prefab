@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5757653623610727395}
   - component: {fileID: 379483185373760118}
   - component: {fileID: 6539561360104837813}
+  - component: {fileID: 9075862211624916192}
   m_Layer: 0
   m_Name: PurpleCube
   m_TagString: Purple
@@ -145,5 +146,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5965905da0559943819974b1b05b7b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YellowRectangle: {fileID: 0}
+  RedRectangle: {fileID: 0}
+  BlueRectangle: {fileID: 0}
+  PinkRectangle: {fileID: 0}
+  OrangeRectangle: {fileID: 0}
+  GreenRectangle: {fileID: 0}
+  PurpleRectangle: {fileID: 0}
+  CurrentRec: {fileID: 1747411384831086, guid: a1a62bab29eafd54f958bcc5a6f10e7e, type: 3}
+  obj: {fileID: 0}
+--- !u!114 &9075862211624916192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310132788367742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46c4f08fc85fda468f9289ea38421a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
