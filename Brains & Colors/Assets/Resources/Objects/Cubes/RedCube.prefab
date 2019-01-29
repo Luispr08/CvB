@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 5084159401979158977}
   - component: {fileID: 5772387702158586623}
   - component: {fileID: 2513896607209113486}
+  - component: {fileID: 7886823658508525843}
   m_Layer: 0
   m_Name: RedCube
-  m_TagString: Untagged
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,5 +133,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75ba1345ae72809449a6132a20038cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7886823658508525843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074929682467826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5965905da0559943819974b1b05b7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

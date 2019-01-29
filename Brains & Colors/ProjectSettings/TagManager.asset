@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - YellowCube
+  - Yellow
+  - Blue
+  - Red
+  - Pink
+  - Green
+  - Orange
+  - Purple
+  - DestroyAll
   layers:
   - Default
   - TransparentFX

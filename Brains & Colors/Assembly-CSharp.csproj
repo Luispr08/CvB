@@ -70,6 +70,7 @@
     <Compile Include="Assets\Spawner\Spawner3.cs" />
     <Compile Include="Assets\Spawner\Spawner4.cs" />
     <Compile Include="Assets\Spawner\Spawner5.cs" />
+    <Compile Include="Assets\Tapping\Tap.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/pradoregla/Documents/Pro/CvB/Brains &amp; Colors/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
