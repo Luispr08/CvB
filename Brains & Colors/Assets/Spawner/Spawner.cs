@@ -55,40 +55,40 @@ public class Spawner : MonoBehaviour {
             if (RanNum == 1)
             {
                 Instantiate(YellowRectangle, transform.position, transform.rotation);
-                print("Yellow Rec was spawned");
+               // print("Yellow Rec was spawned");
             }
             else if (RanNum == 2)
             {
                 Instantiate(RedRectangle, transform.position, transform.rotation);
-                print("Red Rec was spawned");
+              //  print("Red Rec was spawned");
 
             }
             else if (RanNum == 3)
             {
                 Instantiate(BlueRectangle, transform.position, transform.rotation);
-                print("Blue Rec was spawned");
+               // print("Blue Rec was spawned");
                 
             }
             else if (RanNum == 4)
             {
                 Instantiate(PinkRectangle, transform.position, transform.rotation);
-                print("Pink Rec was spawned");
+                //print("Pink Rec was spawned");
         
             }
             else if (RanNum == 5)
             {
                 Instantiate(OrangeRectangle, transform.position, transform.rotation);
-                print("Orange Rec was spawned");
+               // print("Orange Rec was spawned");
             }
             else if (RanNum == 6)
             {
                 Instantiate(GreenRectangle, transform.position, transform.rotation);
-                print("Green Rec was spawned");
+                //print("Green Rec was spawned");
             }
             else if (RanNum == 7)
             {
                 Instantiate(PurpleRectangle, transform.position, transform.rotation);
-                print("Purple Rec was spawned");
+                //print("Purple Rec was spawned");
             }
             time = time % 1f; //Same for this number.
             flag = false;

@@ -39,37 +39,37 @@ public class Spawner5 : MonoBehaviour
             if (RanNum == 1)
             {
                 Instantiate(YellowCube, transform.position, transform.rotation);
-                print("Yellow Cube was spawned");
+               // print("Yellow Cube was spawned");
             }
             else if (RanNum == 2)
             {
                 Instantiate(RedCube, transform.position, transform.rotation);
-                print("Red Cube was spawned");
+               // print("Red Cube was spawned");
             }
             else if (RanNum == 3)
             {
                 Instantiate(BlueCube, transform.position, transform.rotation);
-                print("Blue Cube was spawned");
+               // print("Blue Cube was spawned");
             }
             else if (RanNum == 4)
             {
                 Instantiate(PinkCube, transform.position, transform.rotation);
-                print("Pink Cube was spawned");
+               // print("Pink Cube was spawned");
             }
             else if (RanNum == 5)
             {
                 Instantiate(OrangeCube, transform.position, transform.rotation);
-                print("Orange Cube was spawned");
+              //  print("Orange Cube was spawned");
             }
             else if (RanNum == 6)
             {
                 Instantiate(GreenCube, transform.position, transform.rotation);
-                print("Green Cube was spawned");
+                //print("Green Cube was spawned");
             }
             else if (RanNum == 7)
             {
                 Instantiate(PurpleCube, transform.position, transform.rotation);
-                print("Purple was spawned");
+               // print("Purple was spawned");
             }
             time = time % 1f; //Same for this number.
         }
