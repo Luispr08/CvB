@@ -21,6 +21,8 @@ public class Dectection : MonoBehaviour
         if (col.gameObject.name == "BlueIdentifier(Clone)" || col.gameObject.name == "YellowIdentifier(Clone)" || col.gameObject.name == "RedIdentifier(Clone)" || col.gameObject.name == "PinkIdentifier(Clone)" ||
             col.gameObject.name == "OrangeIdentifier(Clone)" ||  col.gameObject.name == "GreenIdentifier(Clone)" || col.gameObject.name == "PurpleIdentifier(Clone)")
         {
+            Tap.CubeNumberTracker = 0; //The player missed the cube before it touched the identifier therefore we reset the number of consecutive cubes the player has clicked
+            MultiplierScript.multi = 0;//The player missed the cube before it tocuhed the identifier thefore we take away the multiplier the player was building (Reset to zero).
             Destroy(col.gameObject); //This is the name of the identifier therefore is destroyed. "col" that is.
             Destroy(this.gameObject);//This destroys all the objects that have this script. 
         }

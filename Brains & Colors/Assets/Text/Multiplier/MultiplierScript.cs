@@ -5,7 +5,7 @@ using UnityEngine;
 public class MultiplierScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static int multi = 5;
+    public static int multi = 0;
     TextMesh MultiText;
     void Start()
     {

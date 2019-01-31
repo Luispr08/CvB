@@ -71,7 +71,9 @@
     <Compile Include="Assets\Spawner\Spawner4.cs" />
     <Compile Include="Assets\Spawner\Spawner5.cs" />
     <Compile Include="Assets\Tapping\Tap.cs" />
+    <Compile Include="Assets\Text\Lives\LivesDecreaserUpdater.cs" />
     <Compile Include="Assets\Text\Lives\LivesScript.cs" />
+    <Compile Include="Assets\Text\Multiplier\MultiplierScript.cs" />
     <Compile Include="Assets\Text\Score\ScoreScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/pradoregla/Documents/Pro/CvB/Brains &amp; Colors/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
