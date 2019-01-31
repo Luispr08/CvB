@@ -12,6 +12,7 @@ public class Spawner3 : MonoBehaviour
     public GameObject OrangeCube;
     public GameObject GreenCube;
     public GameObject PurpleCube;
+    public GameObject LiveDecreaser;
     private float time = 0.0f;
     public static int S3;
     void Start()
@@ -23,6 +24,7 @@ public class Spawner3 : MonoBehaviour
         OrangeCube = Resources.Load<GameObject>("Objects/Cubes/OrangeCube");
         GreenCube = Resources.Load<GameObject>("Objects/Cubes/GreenCube");
         PurpleCube = Resources.Load<GameObject>("Objects/Cubes/PurpleCube");
+        LiveDecreaser = Resources.Load<GameObject>("Objects/Cubes/LivesDecreaser");
     }
 
     // Update is called once per frame
@@ -34,10 +36,12 @@ public class Spawner3 : MonoBehaviour
         int RanNum = rangen.n3; //Generates a random number between 1 and 7 to choose for the number
         if (time >= 2f) //Hihger this number for less frequency; lower for more frequency
         {
+            Instantiate(LiveDecreaser, transform.position, transform.rotation);
             //S3 = RanNum;
             if (RanNum == 1)
             {
                 Instantiate(YellowCube, transform.position, transform.rotation);
+                
                 //print("Yellow Cube was spawned");
             }
             else if (RanNum == 2)

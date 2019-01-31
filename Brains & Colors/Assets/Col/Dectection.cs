@@ -24,6 +24,7 @@ public class Dectection : MonoBehaviour
             Destroy(col.gameObject); //This is the name of the identifier therefore is destroyed. "col" that is.
             Destroy(this.gameObject);//This destroys all the objects that have this script. 
         }
+        
     }
 
 }

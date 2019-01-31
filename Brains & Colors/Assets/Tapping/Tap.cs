@@ -89,6 +89,7 @@ public class Tap : MonoBehaviour
          {
             //CORRECT COLOR!: destroy all the objects, add multiplier and increase score. 
             //Destroy all objects in the scene in order to obtain the next wave of cubes.
+            ScoreScript.score += 100;
             foreach (GameObject allObjectsInScene in allObjectsInScene)
             {
                 Destroy(allObjectsInScene);
@@ -97,12 +98,13 @@ public class Tap : MonoBehaviour
       else if (this.gameObject.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(gameObject.tag).Length > 2) //If this conditioned is met that means there is more than one cube of the same color as the identifier therefore I need to delete this one cube and update stats.
         {
             //CORRECT COLOR!: Destroy only this object, add multiplier, and update score.
+            ScoreScript.score += 100;
             Destroy(this.gameObject);
         }
         else if (GameObject.FindGameObjectWithTag(gameObject.tag) != GameObject.FindGameObjectWithTag(CurrentRec.gameObject.tag)) //
         {
             //WRONG COLOR!: destroy this object, decrease multiplier, and update lives.
-            
+            LivesScript.lives -= 1;
             Destroy(this.gameObject);
         }
 
