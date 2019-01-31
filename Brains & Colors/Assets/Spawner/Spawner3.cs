@@ -24,7 +24,7 @@ public class Spawner3 : MonoBehaviour
         OrangeCube = Resources.Load<GameObject>("Objects/Cubes/OrangeCube");
         GreenCube = Resources.Load<GameObject>("Objects/Cubes/GreenCube");
         PurpleCube = Resources.Load<GameObject>("Objects/Cubes/PurpleCube");
-        LiveDecreaser = Resources.Load<GameObject>("Objects/Cubes/LivesDecreaser");
+        LiveDecreaser = Resources.Load<GameObject>("Objects/Cubes/LivesUpdater");
     }
 
     // Update is called once per frame

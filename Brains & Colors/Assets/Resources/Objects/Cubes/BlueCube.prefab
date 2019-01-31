@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3552756390261110740}
   - component: {fileID: 1722809389715218908}
   - component: {fileID: 2980607974883177942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BlueCube
   m_TagString: Blue
   m_Icon: {fileID: 0}

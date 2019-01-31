@@ -20,6 +20,7 @@ public class Tap : MonoBehaviour
     public GameObject GreenCube;
     public GameObject PurpleCube;
 
+    public GameObject LivesUpdater;
     public GameObject CurrentRec;
     
     public List<GameObject> allObjectsInScene;
@@ -41,12 +42,14 @@ public class Tap : MonoBehaviour
         OrangeCube = GameObject.Find("OrangeCube(Clone)");
         GreenCube = GameObject.Find("GreenCube(Clone)");
         PurpleCube = GameObject.Find("PurpleCube(Clone)");
+
+        LivesUpdater = GameObject.Find("LivesUpdater(Clone)"); //Rule to follow: All the objects in the scene should be destroyed in order to be able to destroy this object.
     }
 
     // Update is called once per frame
     void Update()
     {
-        allObjectsInScene = new List<GameObject> {YellowRectangle,YellowCube, RedRectangle, RedCube, BlueCube, BlueRectangle, PinkCube, PinkRectangle, OrangeCube, OrangeRectangle, GreenCube, GreenRectangle, PurpleCube,  PurpleRectangle }; //List of all the objects in the scene
+        allObjectsInScene = new List<GameObject> {LivesUpdater,YellowRectangle,YellowCube, RedRectangle, RedCube, BlueCube, BlueRectangle, PinkCube, PinkRectangle, OrangeCube, OrangeRectangle, GreenCube, GreenRectangle, PurpleCube,  PurpleRectangle }; //List of all the objects in the scene
         //We check if any of these rectangle are currently in the scene if one of them is we set it to Current Rec which will be the variable to check if the clicked object is of the same tag.
         if (YellowRectangle != null)
         {
