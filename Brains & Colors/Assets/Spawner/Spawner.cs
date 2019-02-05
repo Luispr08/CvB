@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour {
     public GameObject PurpleRectangle;
     private float time = 0.0f;
     public bool flag = false;
-    public int C1, C2, C3, C4, C5;
+    
     
 
 
@@ -31,17 +31,7 @@ public class Spawner : MonoBehaviour {
     
 	void Update ()
     {
-        //This code will choose a color from the cubes spawned in order to slways spawn a color identifier that at least matches one of the spawned cubes.
-        //C1 = Spawner1.S1;
-        //C2 = Spawner2.S2;
-        //C3 = Spawner3.S3;
-        //C4 = Spawner4.S4;
-        //C5 = Spawner5.S5;
-
-        //System.Random r = new System.Random();
-        //var values = new[] { C1, C2, C3, C4, C5 };
-        //int RanNum = values[r.Next(values.Length)];
-
+        
         if (flag == false)
         {
             rangen.rangenerator();
@@ -50,8 +40,11 @@ public class Spawner : MonoBehaviour {
         
         time += Time.deltaTime;
         int RanNum = rangen.Ident;
-        if (time >= 2f) //This should be only every time the cube with its corresponding color is destroyed.
+        if (time >= 2f && (Tap.FirstSpawn == false || Tap.RespawnFlag == true) ) //This should be only every time the cube with its corresponding color is destroyed.
         {
+            //WindowTime += Time.deltaTime; //As soon as the conditions above are met we want to wait .5 seconds for the next wave of cubes to appear. This allows the player to be ready. in the future we can reduce this depending on the level.
+            //if(WindowTime >= 0.5f) //HALF A SECOND WINDOW SHOULD BE HERE
+
             if (RanNum == 1)
             {
                 Instantiate(YellowRectangle, transform.position, transform.rotation);

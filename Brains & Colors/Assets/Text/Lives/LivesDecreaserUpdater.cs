@@ -22,7 +22,8 @@ public class LivesDecreaserUpdater : MonoBehaviour
             col.gameObject.name == "OrangeIdentifier(Clone)" || col.gameObject.name == "GreenIdentifier(Clone)" || col.gameObject.name == "PurpleIdentifier(Clone)")
         {
             LivesScript.lives -= 1;
-            Destroy(this.gameObject); 
+            Destroy(this.gameObject);
+            Tap.RespawnFlag = true; //Allows the next wave of cubes to respawn.
         }
 
     }

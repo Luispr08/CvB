@@ -23,6 +23,11 @@ public class Tap : MonoBehaviour
     public GameObject LivesUpdater;
     public GameObject CurrentRec;
 
+    public GameObject ShowMulti;
+    public TextMesh Multipliermesh;
+
+    public static bool RespawnFlag = false;
+    public static bool FirstSpawn = false;
     public static int CubeNumberTracker = 0; //This will track how many consecutive cubes has the player clicked.
     public List<GameObject> allObjectsInScene;
     // Start is called before the first frame update
@@ -46,7 +51,7 @@ public class Tap : MonoBehaviour
 
         LivesUpdater = GameObject.Find("LivesUpdater(Clone)"); //Rule to follow: All the objects in the scene should be destroyed in order to be able to destroy this object.
 
-       
+      
     }
 
     // Update is called once per frame
@@ -91,21 +96,28 @@ public class Tap : MonoBehaviour
         //Debug.Log("Cube tag is: "+ this.gameObject.tag);
         //Debug.Log("Rec tag is: "+ CurrentRec.gameObject.tag);
 
-        if (this.gameObject.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(this.gameObject.tag).Length ==2) //If lenght is 2 or less means that there's only one cube of the same color as the rectangle and since we matched the color we can destroy all the cubes for the next wave to come in. 
-         {
+        if (this.gameObject.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(this.gameObject.tag).Length == 2) //If lenght is 2 or less means that there's only one cube of the same color as the rectangle and since we matched the color we can destroy all the cubes for the next wave to come in. 
+        {
             //CORRECT COLOR!: destroy all the objects, add multiplier and increase score. 
             //Destroy all objects in the scene in order to obtain the next wave of cubes.
             //---------------------------------------------------------------------------
             //Multiplier Code
-            CubeNumberTracker +=1; //Adds the number of cubes the player has clicked.
-            Debug.Log("Cube number tracker  is: "+ CubeNumberTracker);
+            CubeNumberTracker += 1; //Adds the number of cubes the player has clicked.
+            Debug.Log("Cube number tracker  is: " + CubeNumberTracker);
             MultiplierUpdater(); //Updates the multiplier based on the number of consecutive cubes clicked.
             //---------------------------------------------------------------------------
+
+             if (MultiplierScript.multi >= 1) //This shows the multiplier text coming out of the cube when the player hits a cube and a multiplier.
+            { 
+                var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+            }
 
             foreach (GameObject allObjectsInScene in allObjectsInScene)
             {
                 Destroy(allObjectsInScene);
             }
+            RespawnFlag = true;
         }
       else if (this.gameObject.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(gameObject.tag).Length > 2) //If this conditioned is met that means there is more than one cube of the same color as the identifier therefore I need to delete this one cube and update stats.
         {
@@ -116,6 +128,7 @@ public class Tap : MonoBehaviour
             MultiplierUpdater();
 
             Destroy(this.gameObject);
+            RespawnFlag = true;
         }
         else if (GameObject.FindGameObjectWithTag(gameObject.tag) != GameObject.FindGameObjectWithTag(CurrentRec.gameObject.tag)) //
         {
@@ -128,6 +141,7 @@ public class Tap : MonoBehaviour
             MultiplierScript.multi = 0; //If the player clickes the wrong number we reset the multiplier to zero.
 
             Destroy(this.gameObject);
+            RespawnFlag = true;
         }
 
     }

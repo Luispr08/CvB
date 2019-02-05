@@ -3,7 +3,25 @@ guid: a5965905da0559943819974b1b05b7b1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - YellowRectangle: {instanceID: 0}
+  - RedRectangle: {instanceID: 0}
+  - BlueRectangle: {instanceID: 0}
+  - PinkRectangle: {instanceID: 0}
+  - OrangeRectangle: {instanceID: 0}
+  - GreenRectangle: {instanceID: 0}
+  - PurpleRectangle: {instanceID: 0}
+  - YellowCube: {instanceID: 0}
+  - RedCube: {instanceID: 0}
+  - BlueCube: {instanceID: 0}
+  - PinkCube: {instanceID: 0}
+  - OrangeCube: {instanceID: 0}
+  - GreenCube: {instanceID: 0}
+  - PurpleCube: {instanceID: 0}
+  - LivesUpdater: {instanceID: 0}
+  - CurrentRec: {instanceID: 0}
+  - ShowMulti: {fileID: 1101494493900917901, guid: d4baea8ea1f262342a5fd192653c27b9,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

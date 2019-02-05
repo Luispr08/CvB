@@ -161,5 +161,9 @@ MonoBehaviour:
   OrangeCube: {fileID: 0}
   GreenCube: {fileID: 0}
   PurpleCube: {fileID: 0}
+  LivesUpdater: {fileID: 0}
   CurrentRec: {fileID: 0}
+  ShowMulti: {fileID: 4073219729450522212, guid: bd6fc9d171e807c45ab310be2e1a24e6,
+    type: 3}
+  Multipliermesh: {fileID: 0}
   allObjectsInScene: []

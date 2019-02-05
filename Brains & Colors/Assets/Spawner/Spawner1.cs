@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner1 : MonoBehaviour
 {
-    public static Spawner1 SP1;
+   
     public GameObject YellowCube;
     public GameObject RedCube;
     public GameObject BlueCube;
@@ -35,9 +35,10 @@ public class Spawner1 : MonoBehaviour
         
         time += Time.deltaTime;
         int RanNum = rangen.n1; //Generates a random number between 1 and 7 to choose for the number
-        if (time >= 2f) //Hihger this number for less frequency; lower for more frequency
+        if (time >= 2f && (Tap.FirstSpawn == false || Tap.RespawnFlag == true) ) //Hihger this number for less frequency; lower for more frequency
         {
-         //   S1 = RanNum; //Global variable used to choose a random spawned color.
+            //WindowTime += Time.deltaTime; //As soon as the conditions above are met we want to wait .5 seconds for the next wave of cubes to appear. This allows the player to be ready. in the future we can reduce this depending on the level.
+            //if(WindowTime >= 0.5f) //HALF A SECOND WINDOW SHOULD BE HERE
 
             if (RanNum == 1)
             {
