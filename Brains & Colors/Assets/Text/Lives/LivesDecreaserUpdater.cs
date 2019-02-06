@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LivesDecreaserUpdater : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,8 @@ public class LivesDecreaserUpdater : MonoBehaviour
         {
             LivesScript.lives -= 1;
             Destroy(this.gameObject);
-            Tap.RespawnFlag = true; //Allows the next wave of cubes to respawn.
+
+            
         }
 
     }

@@ -14,7 +14,7 @@ public class Spawner3 : MonoBehaviour
     public GameObject PurpleCube;
     public GameObject LiveDecreaser;
     private float time = 0.0f;
-    public static int S3;
+    public static bool sp3 = false;
     void Start()
     {
         YellowCube = Resources.Load<GameObject>("Objects/Cubes/YellowCube");
@@ -31,55 +31,56 @@ public class Spawner3 : MonoBehaviour
     //LV 1:  Cubes spawn every second.
     void Update()
     {
+       
+            time += Time.deltaTime;
+            int RanNum = rangen.n3; //Generates a random number between 1 and 7 to choose for the number
+            if (time >= 2f) //Hihger this number for less frequency; lower for more frequency
+            {
+                Instantiate(LiveDecreaser, transform.position, transform.rotation); //This is the instantiation of the lives identifier to decrease the lives when it hits the rectangle identifier
 
-        time += Time.deltaTime;
-        int RanNum = rangen.n3; //Generates a random number between 1 and 7 to choose for the number
-        if (time >= 2f && (Tap.FirstSpawn == false || Tap.RespawnFlag == true)) //Hihger this number for less frequency; lower for more frequency
-        {
-            Instantiate(LiveDecreaser, transform.position, transform.rotation); //This is the instantiation of the lives identifier to decrease the lives when it hits the rectangle identifier
+                //WindowTime += Time.deltaTime; //As soon as the conditions above are met we want to wait .5 seconds for the next wave of cubes to appear. This allows the player to be ready. in the future we can reduce this depending on the level.
+                //if(WindowTime >= 0.5f) //HALF A SECOND WINDOW SHOULD BE HERE
 
-            //WindowTime += Time.deltaTime; //As soon as the conditions above are met we want to wait .5 seconds for the next wave of cubes to appear. This allows the player to be ready. in the future we can reduce this depending on the level.
-            //if(WindowTime >= 0.5f) //HALF A SECOND WINDOW SHOULD BE HERE
+                if (RanNum == 1)
+                {
+                    Instantiate(YellowCube, transform.position, transform.rotation);
 
-            if (RanNum == 1)
-            {
-                Instantiate(YellowCube, transform.position, transform.rotation);
-                
-                //print("Yellow Cube was spawned");
-            }
-            else if (RanNum == 2)
-            {
-                Instantiate(RedCube, transform.position, transform.rotation);
-                //print("Red Cube was spawned");
-            }
-            else if (RanNum == 3)
-            {
-                Instantiate(BlueCube, transform.position, transform.rotation);
-               // print("Blue Cube was spawned");
-            }
-            else if (RanNum == 4)
-            {
-                Instantiate(PinkCube, transform.position, transform.rotation);
-               // print("Pink Cube was spawned");
-            }
-            else if (RanNum == 5)
-            {
-                Instantiate(OrangeCube, transform.position, transform.rotation);
-                //print("Orange Cube was spawned");
-            }
-            else if (RanNum == 6)
-            {
-                Instantiate(GreenCube, transform.position, transform.rotation);
-                //print("Green Cube was spawned");
-            }
-            else if (RanNum == 7)
-            {
-                Instantiate(PurpleCube, transform.position, transform.rotation);
-                //print("Purple was spawned");
-            }
-            time = time % 1f; //Same for this number.
-        }
+                    //print("Yellow Cube was spawned");
+                }
+                else if (RanNum == 2)
+                {
+                    Instantiate(RedCube, transform.position, transform.rotation);
+                    //print("Red Cube was spawned");
+                }
+                else if (RanNum == 3)
+                {
+                    Instantiate(BlueCube, transform.position, transform.rotation);
+                    // print("Blue Cube was spawned");
+                }
+                else if (RanNum == 4)
+                {
+                    Instantiate(PinkCube, transform.position, transform.rotation);
+                    // print("Pink Cube was spawned");
+                }
+                else if (RanNum == 5)
+                {
+                    Instantiate(OrangeCube, transform.position, transform.rotation);
+                    //print("Orange Cube was spawned");
+                }
+                else if (RanNum == 6)
+                {
+                    Instantiate(GreenCube, transform.position, transform.rotation);
+                    //print("Green Cube was spawned");
+                }
+                else if (RanNum == 7)
+                {
+                    Instantiate(PurpleCube, transform.position, transform.rotation);
+                    //print("Purple was spawned");
+                }
+                time = time % 1f; //Same for this number.
 
+            }
+        
 
         //Create a function that will spawn the object depending on the score of the player.
         //SCORE OR LEVEL PLAYER FUNCTION.

@@ -26,8 +26,9 @@ public class Tap : MonoBehaviour
     public GameObject ShowMulti;
     public TextMesh Multipliermesh;
 
-    public static bool RespawnFlag = false;
-    public static bool FirstSpawn = false;
+    public static bool RespawnFlag = true;
+    public static bool FirstSpawn = true;
+
     public static int CubeNumberTracker = 0; //This will track how many consecutive cubes has the player clicked.
     public List<GameObject> allObjectsInScene;
     // Start is called before the first frame update
@@ -105,9 +106,9 @@ public class Tap : MonoBehaviour
             CubeNumberTracker += 1; //Adds the number of cubes the player has clicked.
             Debug.Log("Cube number tracker  is: " + CubeNumberTracker);
             MultiplierUpdater(); //Updates the multiplier based on the number of consecutive cubes clicked.
-            //---------------------------------------------------------------------------
-
-             if (MultiplierScript.multi >= 1) //This shows the multiplier text coming out of the cube when the player hits a cube and a multiplier.
+                                 //---------------------------------------------------------------------------
+            
+            if (MultiplierScript.multi >= 1) //This shows the multiplier text coming out of the cube when the player hits a cube and a multiplier.
             { 
                 var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
                 MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
@@ -117,7 +118,7 @@ public class Tap : MonoBehaviour
             {
                 Destroy(allObjectsInScene);
             }
-            RespawnFlag = true;
+           
         }
       else if (this.gameObject.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(gameObject.tag).Length > 2) //If this conditioned is met that means there is more than one cube of the same color as the identifier therefore I need to delete this one cube and update stats.
         {
@@ -128,7 +129,7 @@ public class Tap : MonoBehaviour
             MultiplierUpdater();
 
             Destroy(this.gameObject);
-            RespawnFlag = true;
+            
         }
         else if (GameObject.FindGameObjectWithTag(gameObject.tag) != GameObject.FindGameObjectWithTag(CurrentRec.gameObject.tag)) //
         {
@@ -141,7 +142,7 @@ public class Tap : MonoBehaviour
             MultiplierScript.multi = 0; //If the player clickes the wrong number we reset the multiplier to zero.
 
             Destroy(this.gameObject);
-            RespawnFlag = true;
+            
         }
 
     }

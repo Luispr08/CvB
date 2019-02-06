@@ -12,8 +12,8 @@ public class Spawner : MonoBehaviour {
     public GameObject PurpleRectangle;
     private float time = 0.0f;
     public bool flag = false;
-    
-    
+
+    public static bool sp = false;
 
 
     void Start ()
@@ -36,56 +36,70 @@ public class Spawner : MonoBehaviour {
         {
             rangen.rangenerator();
             flag = true;
+           
         }
         
-        time += Time.deltaTime;
-        int RanNum = rangen.Ident;
-        if (time >= 2f && (Tap.FirstSpawn == false || Tap.RespawnFlag == true) ) //This should be only every time the cube with its corresponding color is destroyed.
-        {
-            //WindowTime += Time.deltaTime; //As soon as the conditions above are met we want to wait .5 seconds for the next wave of cubes to appear. This allows the player to be ready. in the future we can reduce this depending on the level.
-            //if(WindowTime >= 0.5f) //HALF A SECOND WINDOW SHOULD BE HERE
+            time += Time.deltaTime;
+            int RanNum = rangen.Ident;
+            if (time >= 2f) //This should be only every time the cube with its corresponding color is destroyed.
+            {
 
-            if (RanNum == 1)
-            {
-                Instantiate(YellowRectangle, transform.position, transform.rotation);
-               // print("Yellow Rec was spawned");
-            }
-            else if (RanNum == 2)
-            {
-                Instantiate(RedRectangle, transform.position, transform.rotation);
-              //  print("Red Rec was spawned");
+                //WindowTime += Time.deltaTime; //As soon as the conditions above are met we want to wait .5 seconds for the next wave of cubes to appear. This allows the player to be ready. in the future we can reduce this depending on the level.
+                //if(WindowTime >= 0.5f) //HALF A SECOND WINDOW SHOULD BE HERE
 
-            }
-            else if (RanNum == 3)
-            {
-                Instantiate(BlueRectangle, transform.position, transform.rotation);
-               // print("Blue Rec was spawned");
+                if (RanNum == 1)
+                {
+                    Instantiate(YellowRectangle, transform.position, transform.rotation);
+                    // print("Yellow Rec was spawned");
+                    
+                }
+                else if (RanNum == 2)
+                {
+                    Instantiate(RedRectangle, transform.position, transform.rotation);
+                    //  print("Red Rec was spawned");
+                    
+
+                }
+                else if (RanNum == 3)
+                {
+                    Instantiate(BlueRectangle, transform.position, transform.rotation);
+                    // print("Blue Rec was spawned");
+                    
+
+                }
+                else if (RanNum == 4)
+                {
+                    Instantiate(PinkRectangle, transform.position, transform.rotation);
+                    //print("Pink Rec was spawned");
                 
+
+                }
+                else if (RanNum == 5)
+                {
+                    Instantiate(OrangeRectangle, transform.position, transform.rotation);
+                    // print("Orange Rec was spawned");
+                  
+                }
+                else if (RanNum == 6)
+                {
+                    Instantiate(GreenRectangle, transform.position, transform.rotation);
+                    //print("Green Rec was spawned");
+                    
+                }
+                else if (RanNum == 7)
+                {
+                    Instantiate(PurpleRectangle, transform.position, transform.rotation);
+                    //print("Purple Rec was spawned");
+                    
+                }
+                Debug.Log("An identifier has been created");
+                time = time % 1f; //Same for this number.
+                flag = false;
+
+                
+
             }
-            else if (RanNum == 4)
-            {
-                Instantiate(PinkRectangle, transform.position, transform.rotation);
-                //print("Pink Rec was spawned");
         
-            }
-            else if (RanNum == 5)
-            {
-                Instantiate(OrangeRectangle, transform.position, transform.rotation);
-               // print("Orange Rec was spawned");
-            }
-            else if (RanNum == 6)
-            {
-                Instantiate(GreenRectangle, transform.position, transform.rotation);
-                //print("Green Rec was spawned");
-            }
-            else if (RanNum == 7)
-            {
-                Instantiate(PurpleRectangle, transform.position, transform.rotation);
-                //print("Purple Rec was spawned");
-            }
-            time = time % 1f; //Same for this number.
-            flag = false;
-        }
         
 
 

@@ -70,6 +70,7 @@
     <Compile Include="Assets\Spawner\Spawner3.cs" />
     <Compile Include="Assets\Spawner\Spawner4.cs" />
     <Compile Include="Assets\Spawner\Spawner5.cs" />
+    <Compile Include="Assets\Spawner\UltimateCubeSpawner.cs" />
     <Compile Include="Assets\Tapping\Tap.cs" />
     <Compile Include="Assets\Text\Lives\LivesDecreaserUpdater.cs" />
     <Compile Include="Assets\Text\Lives\LivesScript.cs" />
