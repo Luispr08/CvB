@@ -40,8 +40,11 @@ public class UltimateCubeSpawner : MonoBehaviour
 
     public List<int> SpawnedIndexes;
     public GameObject LiveDecreaser;
-    public int LVL = 5;
+    
     private float time = 0.0f;
+    public static int LVL;
+    public static bool SpawnCTRL = true;
+    public int lvlctrl= -2; //Changing this will reduce which colored cubes are gonna appear in the game. This is based on their position in the list; Based on level
     void Start()
     {
         //I grab all the obejcts that I need including the spawn points and I put them all in a list.
@@ -70,54 +73,89 @@ public class UltimateCubeSpawner : MonoBehaviour
 
         LiveDecreaser = Resources.Load<GameObject>("Objects/Cubes/LivesUpdater");
 
-        
+
         //These are the lists.
         //Cubes = new List<GameObject> {YellowCube,RedCube,BlueCube,PinkCube,OrangeCube,GreenCube,PurpleCube};
         //SpawnPoints = new List<GameObject> {s1,s2,s3,s4,s5};
         //RectangleIdentifiers = new List<GameObject> {YellowRectangle, RedRectangle, BlueRectangle, PinkRectangle, OrangeRectangle, GreenRectangle, PurpleRectangle};
-    }
+       
+}
 
     // Update is called once per frame
     void Update()
     {
+        
         //These are the lists.
         Cubes = new List<GameObject> { YellowCube, RedCube, BlueCube, PinkCube, OrangeCube, GreenCube, PurpleCube };
         SpawnPoints = new List<GameObject> { s1, s2, s3, s4, s5 };
         RectangleIdentifiers = new List<GameObject> { YellowRectangle, RedRectangle, BlueRectangle, PinkRectangle, OrangeRectangle, GreenRectangle, PurpleRectangle };
         SpawnedIndexes = new List<int>();
-
+        int obj = 0 ;
+        
         //Now that I have this list I have to develop a way to spawn this cubes once, or more than once. Basically I have to control how many times can we spawn the same color (depending on level!)
-        time += Time.deltaTime;
-
-        if (time >= 2f)
+        if (SpawnCTRL == true)
         {
-            for (int Numcubes = 0; Numcubes < LVL; Numcubes++)
+            //As soon as the game starts it checks for the level. This will set all the variables that complement the level.
+            
+
+            time += Time.deltaTime;
+            
+            if (time >= 1f) //If the time is less than 1 it will cause a bug where cubes spawn too fast and they lose their prefab instantiation meaning you cant destroy or work with them they become a null object with no reference or scripts attached.
             {
-                int obj = Random.Range(0, Cubes.Count); //Obtain the index of the cube that we want to spawn.
-
-                int s_obj = Random.Range(0, SpawnPoints.Count);//Obtain the index of the spawnpoint where we want to spawn the cube.
-
-                Instantiate(Cubes[obj], SpawnPoints[s_obj].transform.position, transform.rotation); //Instiate the cube of the selected index, at the position of the spawn point. 
-                    
-                selection(obj);
-                Cubes.Remove(Cubes[obj]); //Removes item in order to avoid repetitiono of the same object (this will change in the future as I have to spawn two of the same color to make the game harder)
-                SpawnPoints.Remove(SpawnPoints[s_obj]); // Removes spawn point so we dont spawn two cubes at the same location.
-
-                //Stores the indexes of the objects
-                
-
-                if (Numcubes + 1 == LVL) //Required in order to instantiate one identifier at a time.
+               SetLevel();
+               SpawnCTRL = false;
+                for (int Numcubes = 0; Numcubes < LVL; Numcubes++) //Variable LVL. Controls the number of cubes to spawn. 
                 {
-                    int IdentObj = Random.Range(0,SpawnedIndexes.Count); //Finds a random index from the rectangles list and spawns one. The negative number is to avoide spawning the green and purple rectangle as they belong to a higher level.
+                   
+                    //I had to do this if statements because using an int type variable after Cubes.count causes spawning problems for some unknown reason. And i have to use a hardcoded number. 
+                    if (lvlctrl == -2)
+                    {
+                        obj = Random.Range(0, Cubes.Count - 2); //Obtain the index of the cube that we want to spawn.//Excludes Green and Purple rectangle
+                    }
+                    else if (lvlctrl == -1)
+                    {
+                        obj = Random.Range(0, Cubes.Count - 1); //Excludes purple rectangle only
+                    }
+                    else
+                    {
+                        obj = Random.Range(0, Cubes.Count); //Displays all rectangles.
+                    }
+                    int s_obj = Random.Range(0, SpawnPoints.Count);//Obtain the index of the spawnpoint where we want to spawn the cube.
 
-                    Instantiate(RectangleIdentifiers[IdentObj], si.transform.position, transform.rotation);
+                    selection(obj); //Selects which cubes will be spawned in order to select the identifier.
 
-                    Instantiate(LiveDecreaser, s3.transform.position, transform.rotation); //Spawn lives decreaser object only once.
+                    Instantiate(Cubes[obj], SpawnPoints[s_obj].transform.position, transform.rotation); //Instiate the cube of the selected index, at the position of the spawn point. 
+
+                    Cubes.Remove(Cubes[obj]); //Removes item in order to avoid repetitiono of the same object (this will change in the future as I have to spawn two of the same color to make the game harder)
+                    SpawnPoints.Remove(SpawnPoints[s_obj]); // Removes spawn point so we dont spawn two cubes at the same location.
+
+                    //Stores the indexes of the objects
+
+
+                    if (Numcubes + 1 == LVL) //Required in order to instantiate ONE identifier at a time.
+                    {
+                        int[] objNumbers = new int[LVL];
+
+                        for (int i = 0; i < LVL; i++)
+                        {
+                            objNumbers[i] = SpawnedIndexes[i];
+                        }
+                        var values = objNumbers;
+                        System.Random r = new System.Random();
+
+                        int IdentObj = values[r.Next(values.Length)];//Finds a random index from the rectangles list and spawns one.
+                        
+                        Instantiate(RectangleIdentifiers[IdentObj], si.transform.position, transform.rotation);
+
+                        Instantiate(LiveDecreaser, s3.transform.position, transform.rotation); //Spawn lives decreaser object only once.
+
+                    }
+
+
                 }
 
+                time = time % 1;
             }
-
-            time = time % 1;
         }
 
     }
@@ -151,6 +189,16 @@ public class UltimateCubeSpawner : MonoBehaviour
         else if (Cubes[obj] == PurpleCube)
         {
             SpawnedIndexes.Add(6);
+        }
+
+      
+    }
+
+    public void SetLevel()//This function sets the levels with respect to the player's score.
+    {
+        if (ScoreScript.score >= 0 && ScoreScript.score <= 1000)
+        {
+            Levels.level1();
         }
     }
     

@@ -104,7 +104,7 @@ public class Tap : MonoBehaviour
             //---------------------------------------------------------------------------
             //Multiplier Code
             CubeNumberTracker += 1; //Adds the number of cubes the player has clicked.
-            Debug.Log("Cube number tracker  is: " + CubeNumberTracker);
+           // Debug.Log("Cube number tracker  is: " + CubeNumberTracker);
             MultiplierUpdater(); //Updates the multiplier based on the number of consecutive cubes clicked.
                                  //---------------------------------------------------------------------------
             
@@ -118,7 +118,8 @@ public class Tap : MonoBehaviour
             {
                 Destroy(allObjectsInScene);
             }
-           
+            UltimateCubeSpawner.SpawnCTRL = true;
+
         }
       else if (this.gameObject.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(gameObject.tag).Length > 2) //If this conditioned is met that means there is more than one cube of the same color as the identifier therefore I need to delete this one cube and update stats.
         {
