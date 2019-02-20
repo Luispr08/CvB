@@ -42,9 +42,12 @@ public class UltimateCubeSpawner : MonoBehaviour
     public GameObject LiveDecreaser;
     
     private float time = 0.0f;
-    public static int LVL;
+    public static int LVL;//Decides how many cubes will be spawned in the game.
     public static bool SpawnCTRL = true;
     public int lvlctrl= -2; //Changing this will reduce which colored cubes are gonna appear in the game. This is based on their position in the list; Based on level
+    public static bool DuplicateCubes = false; //This controls if we want more cubes of the same color or not. False = don't allow duplicate cubes; True = allow Duplicate cubes;
+
+
     void Start()
     {
         //I grab all the obejcts that I need including the spawn points and I put them all in a list.
@@ -102,23 +105,25 @@ public class UltimateCubeSpawner : MonoBehaviour
             
             if (time >= 1f) //If the time is less than 1 it will cause a bug where cubes spawn too fast and they lose their prefab instantiation meaning you cant destroy or work with them they become a null object with no reference or scripts attached.
             {
+
                SetLevel();
-               SpawnCTRL = false;
+
+               SpawnCTRL = false; //Set to false so we only spawn cubes after the other last wave of cubes has been destroyed. 
                 for (int Numcubes = 0; Numcubes < LVL; Numcubes++) //Variable LVL. Controls the number of cubes to spawn. 
                 {
                    
                     //I had to do this if statements because using an int type variable after Cubes.count causes spawning problems for some unknown reason. And i have to use a hardcoded number. 
                     if (lvlctrl == -2)
                     {
-                        obj = Random.Range(0, Cubes.Count - 2); //Obtain the index of the cube that we want to spawn.//Excludes Green and Purple rectangle
+                        obj = Random.Range(0, Cubes.Count - 2); //Obtain the index of the cube that we want to spawn. Excludes Green and Purple cubes
                     }
                     else if (lvlctrl == -1)
                     {
-                        obj = Random.Range(0, Cubes.Count - 1); //Excludes purple rectangle only
+                        obj = Random.Range(0, Cubes.Count - 1); //Excludes purple cube only
                     }
                     else
                     {
-                        obj = Random.Range(0, Cubes.Count); //Displays all rectangles.
+                        obj = Random.Range(0, Cubes.Count); //Displays all cubes.
                     }
                     int s_obj = Random.Range(0, SpawnPoints.Count);//Obtain the index of the spawnpoint where we want to spawn the cube.
 
@@ -126,7 +131,11 @@ public class UltimateCubeSpawner : MonoBehaviour
 
                     Instantiate(Cubes[obj], SpawnPoints[s_obj].transform.position, transform.rotation); //Instiate the cube of the selected index, at the position of the spawn point. 
 
-                    Cubes.Remove(Cubes[obj]); //Removes item in order to avoid repetitiono of the same object (this will change in the future as I have to spawn two of the same color to make the game harder)
+                    if (DuplicateCubes == false) //Don't allow duplicate cubes. If true it will allow duplicates.
+                    {
+                        Cubes.Remove(Cubes[obj]); //Removes item in order to avoid repetition of the same object (this will change in the future as I have to spawn two of the same color to make the game harder)
+                    }
+
                     SpawnPoints.Remove(SpawnPoints[s_obj]); // Removes spawn point so we dont spawn two cubes at the same location.
 
                     //Stores the indexes of the objects
@@ -199,6 +208,7 @@ public class UltimateCubeSpawner : MonoBehaviour
         if (ScoreScript.score >= 0 && ScoreScript.score <= 1000)
         {
             Levels.level1();
+            DuplicateCubes = true;
         }
     }
     

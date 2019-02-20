@@ -31,6 +31,7 @@ public class Tap : MonoBehaviour
 
     public static int CubeNumberTracker = 0; //This will track how many consecutive cubes has the player clicked.
     public List<GameObject> allObjectsInScene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,14 +52,16 @@ public class Tap : MonoBehaviour
         PurpleCube = GameObject.Find("PurpleCube(Clone)");
 
         LivesUpdater = GameObject.Find("LivesUpdater(Clone)"); //Rule to follow: All the objects in the scene should be destroyed in order to be able to destroy this object.
+        allObjectsInScene = new List<GameObject> { LivesUpdater, YellowRectangle, YellowCube, RedRectangle, RedCube, BlueCube, BlueRectangle, PinkCube, PinkRectangle, OrangeCube, OrangeRectangle, GreenCube, GreenRectangle, PurpleCube, PurpleRectangle }; //List of all the objects in the scene
 
-      
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        allObjectsInScene = new List<GameObject> {LivesUpdater,YellowRectangle,YellowCube, RedRectangle, RedCube, BlueCube, BlueRectangle, PinkCube, PinkRectangle, OrangeCube, OrangeRectangle, GreenCube, GreenRectangle, PurpleCube,  PurpleRectangle }; //List of all the objects in the scene
+        //allObjectsTags = new List<string> {LivesUpdater.tag,YellowRectangle.tag, YellowCube.tag, RedRectangle.tag, RedCube.tag, BlueCube.tag, BlueRectangle.tag, PinkCube.tag, PinkRectangle.tag, OrangeCube.tag, OrangeRectangle.tag, GreenCube.tag, GreenRectangle.tag, PurpleCube.tag, PurpleRectangle.tag };
         //We check if any of these rectangle are currently in the scene if one of them is we set it to Current Rec which will be the variable to check if the clicked object is of the same tag.
         if (YellowRectangle != null)
         {
@@ -95,16 +98,18 @@ public class Tap : MonoBehaviour
     public void OnMouseDown()
     {
         //Debug.Log("Cube tag is: "+ this.gameObject.tag);
-        //Debug.Log("Rec tag is: "+ CurrentRec.gameObject.tag);
+        // Debug.Log("Rec tag is: "+ CurrentRec.gameObject.tag);
 
-        if (this.gameObject.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(this.gameObject.tag).Length == 2) //If lenght is 2 or less means that there's only one cube of the same color as the rectangle and since we matched the color we can destroy all the cubes for the next wave to come in. 
+        var OBJ = this.gameObject;
+        if (OBJ.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(OBJ.tag).Length == 2) //If lenght is 2 or less means that there's only one cube of the same color as the rectangle and since we matched the color we can destroy all the cubes for the next wave to come in. 
         {
+            Debug.Log("Second cube clicked: "+this.gameObject);
             //CORRECT COLOR!: destroy all the objects, add multiplier and increase score. 
             //Destroy all objects in the scene in order to obtain the next wave of cubes.
             //---------------------------------------------------------------------------
             //Multiplier Code
             CubeNumberTracker += 1; //Adds the number of cubes the player has clicked.
-           // Debug.Log("Cube number tracker  is: " + CubeNumberTracker);
+            
             MultiplierUpdater(); //Updates the multiplier based on the number of consecutive cubes clicked.
                                  //---------------------------------------------------------------------------
             
@@ -114,25 +119,29 @@ public class Tap : MonoBehaviour
                 MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
             }
 
-            foreach (GameObject allObjectsInScene in allObjectsInScene)
+              foreach (GameObject ObjectInScene in allObjectsInScene)
             {
-                Destroy(allObjectsInScene);
+                Destro();
+                Destroy(ObjectInScene);
             }
-            UltimateCubeSpawner.SpawnCTRL = true;
+
+            Destroy(this.gameObject);
+            Debug.Log("All cubes should have been destroyed!");
+            UltimateCubeSpawner.SpawnCTRL = true; //Tells the UltimateCubeSpawner that all the cubes un the scene have been destroyed so spawning new cubes and a new identifier is safe.
 
         }
-      else if (this.gameObject.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(gameObject.tag).Length > 2) //If this conditioned is met that means there is more than one cube of the same color as the identifier therefore I need to delete this one cube and update stats.
+      else if (OBJ.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(OBJ.tag).Length > 2) //If this conditioned is met that means there is more than one cube of the same color as the identifier therefore I need to delete this one cube and update stats.
         {
             //CORRECT COLOR!: Destroy only this object, add multiplier, and update score.
-
+            Debug.Log("Clicked cube: "+this.gameObject);
             CubeNumberTracker += 1;
 
             MultiplierUpdater();
 
-            Destroy(this.gameObject);
+            Destroy(OBJ);
             
         }
-        else if (GameObject.FindGameObjectWithTag(gameObject.tag) != GameObject.FindGameObjectWithTag(CurrentRec.gameObject.tag)) //
+        else if (GameObject.FindGameObjectWithTag(OBJ.tag) != GameObject.FindGameObjectWithTag(CurrentRec.gameObject.tag)) //
         {
             //WRONG COLOR!: destroy this object, decrease multiplier, and update lives.
             
@@ -142,7 +151,7 @@ public class Tap : MonoBehaviour
 
             MultiplierScript.multi = 0; //If the player clickes the wrong number we reset the multiplier to zero.
 
-            Destroy(this.gameObject);
+            Destroy(OBJ);
             
         }
 
@@ -210,5 +219,44 @@ public class Tap : MonoBehaviour
         
     }
 
-    
+    public void Destro() //This works temporarily
+    {
+        var tags = GameObject.FindGameObjectsWithTag("Blue");
+        foreach (var clone in tags)
+        {
+            Destroy(clone);
+        }
+        var tags1 = GameObject.FindGameObjectsWithTag("Yellow");
+        foreach (var clone in tags1)
+        {
+            Destroy(clone);
+        }
+        var tags2 = GameObject.FindGameObjectsWithTag("Red");
+        foreach (var clone in tags2)
+        {
+            Destroy(clone);
+        }
+        var tags3 = GameObject.FindGameObjectsWithTag("Green");
+        foreach (var clone in tags3)
+        {
+            Destroy(clone);
+        }
+        var tags4 = GameObject.FindGameObjectsWithTag("Orange");
+        foreach (var clone in tags4)
+        {
+            Destroy(clone);
+        }
+        var tags5 = GameObject.FindGameObjectsWithTag("Purple");
+        foreach (var clone in tags5)
+        {
+            Destroy(clone);
+        }
+        var tags6 = GameObject.FindGameObjectsWithTag("Pink");
+        foreach (var clone in tags6)
+        {
+            Destroy(clone);
+        }
+
+    }
+
 }
