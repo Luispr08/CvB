@@ -20,38 +20,83 @@ public class Levels : MonoBehaviour
      *-Rules: Rules tell the player what they have to do for example. Rule will say tap cubes with the color that matches the letter of the identifier. OR tap the letters that are the same color as the identifier. AND SO ON
      * 
      */
-    public static void level1()
+    public static void level1() //THIS IS LEVEL 1!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     {
+        //I CAN WRITE SOMETHING LIKE WELCOME GET YOU BRAIN READY! ETC
+
         //Level 1 is the beginning of the game.
-        if (ScoreScript.score >=0 && ScoreScript.score <= 500)
+        if (ScoreScript.score >= 0 && ScoreScript.score <= 500)
         {
             UltimateCubeSpawner.LVL = 3; //We spawn 3 cubes.
-            
+
         }
-        else if (ScoreScript.score >= 500 && ScoreScript.score < 1000)//If the player is between 500 & 1000
+        else if (ScoreScript.score >= 500 && ScoreScript.score < 2000)//If the player is between 500 & 1000
         {
             //Increase the speed of the cubes by .5 .
-            MoveObject.speed = -2.5f; //QUESTION: WILL THE SPEED STAY THE SAME? YES IT DOES STAY THE SAME
+            MoveObject.speed = -4f; //QUESTION: WILL THE SPEED STAY THE SAME? YES IT DOES STAY THE SAME
+            UltimateCubeSpawner.DuplicateCubes = true; //We want to have duplicate cubes here.
+            
         }
-        else if (ScoreScript.score >= 1000 && ScoreScript.score < 5000)
+        else if (ScoreScript.score >= 2000 && ScoreScript.score < 10000)
         {
             //Introduce 4th cube
             UltimateCubeSpawner.LVL = 4;//4 cubes spawn instead of 3
+            UltimateCubeSpawner.DuplicateCubes = false; //No more Duplicates
+        }
+        else if (ScoreScript.score >= 10000 && ScoreScript.score < 20000)
+        {
+            MoveObject.speed = -6f; //Increase speed a little more.
+            UltimateCubeSpawner.DuplicateCubes = true; //We want Duplicates.
+        }
+        
+    }
+
+
+    public static void level2() //THIS IS LEVEL 2!!!!!!!!!!!!!!
+    {
+        if (ScoreScript.score >= 20000 && ScoreScript.score < 25000)
+        {
+            UltimateCubeSpawner.LVL = 5; //Introduce the 5th cube
+            UltimateCubeSpawner.DuplicateCubes = false; //No cubes duplicates
+            MoveObject.speed = -5f; //Reduce speed by 1
+        }
+        else if (ScoreScript.score >= 25000 && ScoreScript.score < 35000)
+        {
+            UltimateCubeSpawner.DuplicateCubes = true; //Allow duplicates
+            MoveObject.speed = -6f; //Make them go faster
         }
     }
-    public void level2()
-    {
 
-    }
-    public void level3()
-    {
 
-    }
-    public void level4()
+    public static void level3()
     {
-
+        if (ScoreScript.score >= 35000 && ScoreScript.score < 45000)
+        {
+            UltimateCubeSpawner.lvlctrl = -1; //Introduce green cube
+            UltimateCubeSpawner.DuplicateCubes = false; //No duplicates
+        }
+        else if (ScoreScript.score >= 45000 && ScoreScript.score < 60000)
+        {
+            UltimateCubeSpawner.DuplicateCubes = true; //Duplicates
+            MoveObject.speed = -6.5f; //Increase speed.
+        }
     }
-    public void level5()
+
+    public static void level4()
+    {
+        if (ScoreScript.score >= 60000 && ScoreScript.score < 75000)
+        {
+            UltimateCubeSpawner.lvlctrl = 0; //Introduce purple cube
+            UltimateCubeSpawner.DuplicateCubes = false; //No duplicates
+            MoveObject.speed = -7.5f;
+        }
+        else if (ScoreScript.score >= 75000 && ScoreScript.score < 100000)
+        {
+            UltimateCubeSpawner.DuplicateCubes = true; //Duplicates
+            MoveObject.speed = -9f; //Speed
+        }
+    }
+    public static void level5()
     {
 
     }

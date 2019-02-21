@@ -44,7 +44,7 @@ public class UltimateCubeSpawner : MonoBehaviour
     private float time = 0.0f;
     public static int LVL;//Decides how many cubes will be spawned in the game.
     public static bool SpawnCTRL = true;
-    public int lvlctrl= -2; //Changing this will reduce which colored cubes are gonna appear in the game. This is based on their position in the list; Based on level
+    public static int lvlctrl= -2; //Changing this will reduce which colored cubes are gonna appear in the game. This is based on their position in the list; Based on level
     public static bool DuplicateCubes = false; //This controls if we want more cubes of the same color or not. False = don't allow duplicate cubes; True = allow Duplicate cubes;
 
 
@@ -120,11 +120,14 @@ public class UltimateCubeSpawner : MonoBehaviour
                     else if (lvlctrl == -1)
                     {
                         obj = Random.Range(0, Cubes.Count - 1); //Excludes purple cube only
+                        Debug.Log("Do we enter here?");
                     }
                     else
                     {
                         obj = Random.Range(0, Cubes.Count); //Displays all cubes.
                     }
+
+
                     int s_obj = Random.Range(0, SpawnPoints.Count);//Obtain the index of the spawnpoint where we want to spawn the cube.
 
                     selection(obj); //Selects which cubes will be spawned in order to select the identifier.
@@ -205,10 +208,21 @@ public class UltimateCubeSpawner : MonoBehaviour
 
     public void SetLevel()//This function sets the levels with respect to the player's score.
     {
-        if (ScoreScript.score >= 0 && ScoreScript.score <= 1000)
+        if (ScoreScript.score >= 0 && ScoreScript.score <= 20000)
         {
             Levels.level1();
-            DuplicateCubes = true;
+        }
+        else if (ScoreScript.score >= 0 && ScoreScript.score <= 35000)
+        {
+            Levels.level2();
+        }
+        else if (ScoreScript.score >= 35000 && ScoreScript.score <= 60000)
+        {
+            Levels.level3();
+        }
+        else if (ScoreScript.score >= 60000 && ScoreScript.score <= 100000)
+        {
+            Levels.level4();
         }
     }
     

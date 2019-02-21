@@ -135,7 +135,11 @@ public class Tap : MonoBehaviour
             //CORRECT COLOR!: Destroy only this object, add multiplier, and update score.
             Debug.Log("Clicked cube: "+this.gameObject);
             CubeNumberTracker += 1;
-
+            if (MultiplierScript.multi >= 1) //This shows the multiplier text coming out of the cube when the player hits a cube and a multiplier.
+            {
+                var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+            }
             MultiplierUpdater();
 
             Destroy(OBJ);
@@ -219,7 +223,7 @@ public class Tap : MonoBehaviour
         
     }
 
-    public void Destro() //This works temporarily
+    public void Destro() //This works temporarily it makes sures it destroys every cube and rectangle in the scene
     {
         var tags = GameObject.FindGameObjectsWithTag("Blue");
         foreach (var clone in tags)
