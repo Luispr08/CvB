@@ -166,7 +166,6 @@ MonoBehaviour:
   si: {fileID: 0}
   SpawnedIndexes: 
   LiveDecreaser: {fileID: 0}
-  LVL: 5
 --- !u!4 &219705912
 Transform:
   m_ObjectHideFlags: 0
@@ -372,17 +371,17 @@ PrefabInstance:
     - target: {fileID: 694937842169996373, guid: 3e804697691b9a543acfe46e9d37bf92,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 694937842169996373, guid: 3e804697691b9a543acfe46e9d37bf92,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 694937842169996373, guid: 3e804697691b9a543acfe46e9d37bf92,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4742968153213278788, guid: 3e804697691b9a543acfe46e9d37bf92,
         type: 3}
@@ -392,7 +391,7 @@ PrefabInstance:
     - target: {fileID: 4742968153213278788, guid: 3e804697691b9a543acfe46e9d37bf92,
         type: 3}
       propertyPath: m_FontSize
-      value: 20
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 4742968153213278788, guid: 3e804697691b9a543acfe46e9d37bf92,
         type: 3}
@@ -836,10 +835,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5486023118965229227, guid: ac2608156df2d8a4f97f7041657f4858,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486023118965229227, guid: ac2608156df2d8a4f97f7041657f4858,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486023118965229227, guid: ac2608156df2d8a4f97f7041657f4858,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3095187654432816814, guid: ac2608156df2d8a4f97f7041657f4858,
         type: 3}
       propertyPath: m_Text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095187654432816814, guid: ac2608156df2d8a4f97f7041657f4858,
+        type: 3}
+      propertyPath: m_FontSize
+      value: 350
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2608156df2d8a4f97f7041657f4858, type: 3}
@@ -910,10 +929,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2748842859197883500, guid: 472da01905a82084b82bc9626d34569d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2748842859197883500, guid: 472da01905a82084b82bc9626d34569d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2748842859197883500, guid: 472da01905a82084b82bc9626d34569d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 6128583668599323689, guid: 472da01905a82084b82bc9626d34569d,
         type: 3}
       propertyPath: m_Text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128583668599323689, guid: 472da01905a82084b82bc9626d34569d,
+        type: 3}
+      propertyPath: m_FontSize
+      value: 350
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 472da01905a82084b82bc9626d34569d, type: 3}
