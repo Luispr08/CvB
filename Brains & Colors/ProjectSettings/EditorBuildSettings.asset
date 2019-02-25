@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Menu.unity
+    guid: 0e31d8bf6514a6043bbdd387821f05b6
+  - enabled: 1
+    path: Assets/BrainVScolors.unity
+    guid: bc1519d410a6c91498a5d2909cebee16
   m_configObjects: {}
