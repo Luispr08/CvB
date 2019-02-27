@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Col\Dectection.cs" />
     <Compile Include="Assets\LevelsScripts\Levels.cs" />
+    <Compile Include="Assets\Losingscreen.cs" />
     <Compile Include="Assets\Mainmenu.cs" />
     <Compile Include="Assets\Movement\MoveObject.cs" />
     <Compile Include="Assets\Spawner\UltimateCubeSpawner.cs" />

@@ -10,6 +10,7 @@ public class ScoreScript : MonoBehaviour
     void Start()
     {
         Scoretext = gameObject.GetComponent("TextMesh") as TextMesh;
+        score = 0; //Helps restarting the variables when the scene is loaded.
     }
 
     // Update is called once per frame

@@ -10,6 +10,7 @@ public class MultiplierScript : MonoBehaviour
     void Start()
     {
         MultiText = gameObject.GetComponent("TextMesh") as TextMesh;
+        multi = 0;
     }
 
     // Update is called once per frame

@@ -20,7 +20,7 @@ public class Tap : MonoBehaviour
     public GameObject GreenCube;
     public GameObject PurpleCube;
 
-    public GameObject LivesUpdater;
+    public static GameObject LivesUpdater;
     public GameObject CurrentRec;
 
     public GameObject ShowMulti;
@@ -33,8 +33,13 @@ public class Tap : MonoBehaviour
     public List<GameObject> allObjectsInScene;
 
     // Start is called before the first frame update
+
     void Start()
     {
+        //Every static variable has to bee initialized in start in order for it to restart when the scene has been loaded more than once.
+        RespawnFlag = true;
+        FirstSpawn = true;
+
         YellowRectangle = GameObject.Find("YellowIdentifier(Clone)");
         RedRectangle = GameObject.Find("RedIdentifier(Clone)");
         BlueRectangle = GameObject.Find("BlueIdentifier(Clone)");
@@ -161,6 +166,7 @@ public class Tap : MonoBehaviour
 
     }
 
+    
     public void MultiplierUpdater()
     {
         if (CubeNumberTracker < 5)
@@ -223,8 +229,9 @@ public class Tap : MonoBehaviour
         
     }
 
-    public void Destro() //This works temporarily it makes sures it destroys every cube and rectangle in the scene
+    public static void Destro() //This works temporarily it makes sures it destroys every cube and rectangle in the scene
     {
+        Destroy(LivesUpdater);
         var tags = GameObject.FindGameObjectsWithTag("Blue");
         foreach (var clone in tags)
         {
@@ -262,5 +269,7 @@ public class Tap : MonoBehaviour
         }
 
     }
+
+    
 
 }

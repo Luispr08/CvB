@@ -50,6 +50,12 @@ public class UltimateCubeSpawner : MonoBehaviour
 
     void Start()
     {
+        //Required for restarting levels.
+        LVL = 3;
+        SpawnCTRL = true;
+        lvlctrl = -2;
+        DuplicateCubes = false;
+
         //I grab all the obejcts that I need including the spawn points and I put them all in a list.
         YellowCube = Resources.Load<GameObject>("Objects/Cubes/YellowCube");
         RedCube = Resources.Load<GameObject>("Objects/Cubes/RedCube");
