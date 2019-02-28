@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Col\Dectection.cs" />
+    <Compile Include="Assets\Graphics&amp;Effects\BlinkColros.cs" />
     <Compile Include="Assets\LevelsScripts\Levels.cs" />
     <Compile Include="Assets\Losingscreen.cs" />
     <Compile Include="Assets\Mainmenu.cs" />
