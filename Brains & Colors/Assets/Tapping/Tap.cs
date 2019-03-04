@@ -132,6 +132,7 @@ public class Tap : MonoBehaviour
 
             Destroy(this.gameObject);
             Debug.Log("All cubes should have been destroyed!");
+            
             UltimateCubeSpawner.SpawnCTRL = true; //Tells the UltimateCubeSpawner that all the cubes un the scene have been destroyed so spawning new cubes and a new identifier is safe.
 
         }
