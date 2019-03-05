@@ -108,7 +108,7 @@ public class Tap : MonoBehaviour
         var OBJ = this.gameObject;
         if (OBJ.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(OBJ.tag).Length == 2) //If lenght is 2 or less means that there's only one cube of the same color as the rectangle and since we matched the color we can destroy all the cubes for the next wave to come in. 
         {
-            Debug.Log("Second cube clicked: "+this.gameObject);
+           
             //CORRECT COLOR!: destroy all the objects, add multiplier and increase score. 
             //Destroy all objects in the scene in order to obtain the next wave of cubes.
             //---------------------------------------------------------------------------
@@ -131,7 +131,7 @@ public class Tap : MonoBehaviour
             }
 
             Destroy(this.gameObject);
-            Debug.Log("All cubes should have been destroyed!");
+            
             
             UltimateCubeSpawner.SpawnCTRL = true; //Tells the UltimateCubeSpawner that all the cubes un the scene have been destroyed so spawning new cubes and a new identifier is safe.
 
@@ -139,7 +139,7 @@ public class Tap : MonoBehaviour
       else if (OBJ.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(OBJ.tag).Length > 2) //If this conditioned is met that means there is more than one cube of the same color as the identifier therefore I need to delete this one cube and update stats.
         {
             //CORRECT COLOR!: Destroy only this object, add multiplier, and update score.
-            Debug.Log("Clicked cube: "+this.gameObject);
+            
             CubeNumberTracker += 1;
             if (MultiplierScript.multi >= 1) //This shows the multiplier text coming out of the cube when the player hits a cube and a multiplier.
             {

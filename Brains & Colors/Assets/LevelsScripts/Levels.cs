@@ -33,7 +33,9 @@ public class Levels : MonoBehaviour
         else if (ScoreScript.score >= 500 && ScoreScript.score < 2000)//If the player is between 500 & 1000
         {
             //Increase the speed of the cubes by .5 .
-            MoveObject.speed = -4f; //QUESTION: WILL THE SPEED STAY THE SAME? YES IT DOES STAY THE SAME
+            Debug.Log("The speed should change here!");
+            MoveObject.speed = -8f; //QUESTION: WILL THE SPEED STAY THE SAME? YES IT DOES STAY THE SAME
+            Debug.Log("SPEED: " +MoveObject.speed);
             UltimateCubeSpawner.DuplicateCubes = true; //We want to have duplicate cubes here.
             
         }

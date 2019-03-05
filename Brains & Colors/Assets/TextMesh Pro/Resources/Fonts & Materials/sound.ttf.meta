@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 0df6221352f446d48b1ba4bbeccaec06
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Staatliches
+  fontNames:
+  - Staatliches
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3434254278f7ff842a6e33bfaf457db0, type: 3}
+  - {fileID: 12800000, guid: bc02c75cd8c386e41830db52cf8f87e8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8337986727982909938}
   - component: {fileID: 4371397068109274641}
   - component: {fileID: 6695958490890372488}
+  - component: {fileID: 2669519486890824912}
   m_Layer: 9
   m_Name: YellowCube
   m_TagString: Yellow
@@ -145,7 +146,6 @@ MonoBehaviour:
   OrangeCube: {fileID: 0}
   GreenCube: {fileID: 0}
   PurpleCube: {fileID: 0}
-  LivesUpdater: {fileID: 0}
   CurrentRec: {fileID: 0}
   ShowMulti: {fileID: 5356669069802156052, guid: 62b55bd5d799a3b4ab5075f38902518d,
     type: 3}
@@ -167,3 +167,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &2669519486890824912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280487419807192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f184fb254132eca4f84fcae567611490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TouchEffect: {fileID: 0}
+  particleDestroyer: {fileID: 0}

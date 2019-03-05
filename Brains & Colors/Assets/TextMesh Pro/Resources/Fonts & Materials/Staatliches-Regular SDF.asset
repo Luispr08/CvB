@@ -1061,7 +1061,7 @@ Material:
     - _Diffuse: 0.5
     - _DiffusePower: 4
     - _DstBlend: 0
-    - _FaceDilate: 0
+    - _FaceDilate: 0.15
     - _FaceShininess: 0
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
@@ -1080,7 +1080,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _OutlineShininess: 0
-    - _OutlineSoftness: 0
+    - _OutlineSoftness: 1
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
     - _OutlineWidth: 1
@@ -1088,9 +1088,9 @@ Material:
     - _Parallax: 0.02
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 0.7017544
-    - _ScaleRatioB: 0.33854166
-    - _ScaleRatioC: 0.33854166
+    - _ScaleRatioA: 0.35650623
+    - _ScaleRatioB: 0.27604166
+    - _ScaleRatioC: 0.27604166
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0

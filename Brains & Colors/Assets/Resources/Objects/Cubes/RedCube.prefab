@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5772387702158586623}
   - component: {fileID: 2513896607209113486}
   - component: {fileID: 7886823658508525843}
+  - component: {fileID: 2086042211576548412}
   m_Layer: 9
   m_Name: RedCube
   m_TagString: Red
@@ -166,3 +167,16 @@ MonoBehaviour:
     type: 3}
   Multipliermesh: {fileID: 0}
   allObjectsInScene: []
+--- !u!114 &2086042211576548412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074929682467826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f184fb254132eca4f84fcae567611490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TouchEffect: {fileID: 0}

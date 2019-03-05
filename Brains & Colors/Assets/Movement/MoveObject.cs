@@ -11,7 +11,11 @@ public class MoveObject : MonoBehaviour
     {
         cubes = GetComponent<Rigidbody>();
         speed = -2;
-        cubes.velocity = new Vector3(0, speed, 0); //The velocity will increase with respect to time and score of the player.
+        //cubes.velocity = new Vector3(0, speed, 0); //The velocity will increase with respect to time and score of the player.
     }
- 
+
+    private void Update()
+    {
+        cubes.velocity = new Vector3(0, speed, 0);
+    }
 }

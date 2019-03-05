@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5896897195329032858}
   - component: {fileID: 6034930171031219517}
   - component: {fileID: 4950149819986156013}
+  - component: {fileID: 1614800811597803839}
   m_Layer: 9
   m_Name: GreenCube
   m_TagString: Green
@@ -161,9 +162,22 @@ MonoBehaviour:
   OrangeCube: {fileID: 0}
   GreenCube: {fileID: 0}
   PurpleCube: {fileID: 0}
-  LivesUpdater: {fileID: 0}
   CurrentRec: {fileID: 0}
   ShowMulti: {fileID: 5269111152445687380, guid: 4bbfec88577d84741834a97370d81abf,
     type: 3}
   Multipliermesh: {fileID: 0}
   allObjectsInScene: []
+--- !u!114 &1614800811597803839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824347619042132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f184fb254132eca4f84fcae567611490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TouchEffect: {fileID: 0}
+  particleDestroyer: {fileID: 0}
