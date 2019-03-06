@@ -7,7 +7,7 @@ public class ElectricEffectOnTouch : MonoBehaviour
     public GameObject TouchEffect;
     public GameObject particleDestroyer;
     // Start is called before the first frame update
-
+    public bool isQuitting;
    
     void Start()
     {
@@ -22,9 +22,15 @@ public class ElectricEffectOnTouch : MonoBehaviour
        // Destroy(particleDestroyer,0.5f);
 
     }
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
     public void OnDestroy()
     {
-        Destroy(Instantiate(TouchEffect,transform.position,transform.rotation),1f);
-       
+        if (!isQuitting)
+        {
+            Destroy(Instantiate(TouchEffect, transform.position, transform.rotation), 1f);
+        }
     }
 }
