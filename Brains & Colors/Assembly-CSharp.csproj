@@ -61,6 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AudioRecognitionAlgorithm\AudioPeer.cs" />
+    <Compile Include="Assets\AudioRecognitionAlgorithm\InstantiatCubes.cs" />
+    <Compile Include="Assets\AudioRecognitionAlgorithm\paramcube.cs" />
     <Compile Include="Assets\Col\Dectection.cs" />
     <Compile Include="Assets\Graphics&amp;Effects\BlinkColros.cs" />
     <Compile Include="Assets\Graphics&amp;Effects\WarpMaterial\DynamicParticles.cs" />
