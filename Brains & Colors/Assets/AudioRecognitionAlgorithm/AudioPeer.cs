@@ -9,6 +9,13 @@ public class AudioPeer : MonoBehaviour
     public static float[] _samples = new float[512];
 
     public static float[] _freqBand = new float[8];
+    public static float[] _bandBuffer = new float[8];
+    float[] _bufferDecrease = new float[8];
+    float[] _freqBandHighest = new float[8];
+
+    public static float[] _audioBand = new float[8];
+    public static float[] _audioBandBuffer = new float[8];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +28,43 @@ public class AudioPeer : MonoBehaviour
     {
         GetSpectrucmAudioSource();
         MakeFrequencyBands();
+        BandBuffer();
+        CreateAudioBands();
     }
     void GetSpectrucmAudioSource()
     {
         _audioSource.GetSpectrumData(_samples,0,FFTWindow.Blackman);
     }
 
+    void CreateAudioBands()
+    {
+        for (int x = 0; x < 8; x++)
+        {
+            if (_freqBand[x] > _freqBandHighest[x])
+            {
+                _freqBandHighest[x] = _freqBand[x];
+            }
+            _audioBand[x] = (_freqBand[x] / _freqBandHighest[x]);
+            _audioBandBuffer[x] = (_bandBuffer[x] / _freqBandHighest[x]);
+        }
+    }
+    void BandBuffer() //Makes sound bars be more accurate to the sound. 
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            if (_freqBand[i] > _bandBuffer[i])
+            {
+                _bandBuffer[i] = _freqBand[i];
+                _bufferDecrease[i] = 0.005f;
+
+            }
+            if (_freqBand[i] < _bandBuffer[i])
+            {
+                _bandBuffer[i] -= _bufferDecrease[i];
+                _bufferDecrease[i] *= 1.2f;
+            }
+        }
+    }
     void MakeFrequencyBands()
     {
         /*
