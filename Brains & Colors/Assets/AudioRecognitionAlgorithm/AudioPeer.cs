@@ -8,19 +8,25 @@ public class AudioPeer : MonoBehaviour
     AudioSource _audioSource;
     public static float[] _samples = new float[512];
 
-    public static float[] _freqBand = new float[8];
-    public static float[] _bandBuffer = new float[8];
-    float[] _bufferDecrease = new float[8];
-    float[] _freqBandHighest = new float[8];
+    public static float[] _freqBand;
+    public static float[] _bandBuffer ;
+    float[] _bufferDecrease ;
+    float[] _freqBandHighest ;
 
-    public static float[] _audioBand = new float[8];
-    public static float[] _audioBandBuffer = new float[8];
+    public static float[] _audioBand ;
+    public static float[] _audioBandBuffer ;
 
     // Start is called before the first frame update
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        
+        _freqBand = new float[8];
+        _bandBuffer = new float[8];
+        _bufferDecrease = new float[8];
+        _freqBandHighest = new float[8];
+        _audioBand = new float[8];
+        _audioBandBuffer = new float[8];
+
     }
 
     // Update is called once per frame

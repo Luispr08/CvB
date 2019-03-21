@@ -11,7 +11,7 @@ public class paramcube : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _material = GetComponent<MeshRenderer>().materials[0];
+        _material = GetComponent<MeshRenderer>().materials[0];   
     }
 
     // Update is called once per frame

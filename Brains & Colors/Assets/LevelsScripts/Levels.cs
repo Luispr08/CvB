@@ -28,6 +28,7 @@ public class Levels : MonoBehaviour
         if (ScoreScript.score >= 0 && ScoreScript.score <= 500)
         {
             UltimateCubeSpawner.LVL = 3; //We spawn 3 cubes.
+            MoveObject.speed = -2.5f;
 
         }
         else if (ScoreScript.score >= 500 && ScoreScript.score < 2000)//If the player is between 500 & 1000
