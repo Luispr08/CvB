@@ -101,7 +101,7 @@ public class UltimateCubeSpawner : MonoBehaviour
         SpawnedIndexes = new List<int>();
         int obj = 0 ;
         
-        //Now that I have this list I have to develop a way to spawn this cubes once, or more than once. Basically I have to control how many times can we spawn the same color (depending on level!)
+        //Now that I have this list I have to develop a way to spawn these cubes once, or more than once. Basically I have to control how many times can we spawn the same color (depending on level!)
         if (SpawnCTRL == true)
         {
             //As soon as the game starts it checks for the level. This will set all the variables that complement the level.
