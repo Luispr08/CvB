@@ -191,6 +191,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95411894}
   m_CullTransparentMesh: 0
+--- !u!1 &148486559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 485882186473682470, guid: 9ad8a5fdcc0323b40a226c8e8461b2cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 5174483228840082174}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &148486561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148486559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf8456b681e3f24d973c6456e81f441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spheres: []
+  SphereIdentifiers: []
+  YellowS: {fileID: 0}
+  RedS: {fileID: 0}
+  BlueS: {fileID: 0}
+  PinkS: {fileID: 0}
+  OrangeS: {fileID: 0}
+  GreenS: {fileID: 0}
+  PurpleS: {fileID: 0}
+  s1: {fileID: 0}
+  s2: {fileID: 0}
+  s3: {fileID: 0}
+  s4: {fileID: 0}
+  s5: {fileID: 0}
+  S1: {fileID: 0}
+  S2: {fileID: 0}
+  S3: {fileID: 0}
+  S4: {fileID: 0}
+  S5: {fileID: 0}
+  YellowIdent: {fileID: 0}
+  RedIdent: {fileID: 0}
+  BlueIdent: {fileID: 0}
+  PinkIdent: {fileID: 0}
+  OrangeIdent: {fileID: 0}
+  GreenIdent: {fileID: 0}
+  PurpleIdent: {fileID: 0}
+  spawnCTRL: 0
+  t: 0
 --- !u!1 &151802986
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +390,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219705910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efd3fda0cf94c2d4b83508493861b3d6, type: 3}
   m_Name: 
@@ -513,6 +559,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &285317408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 724097214844794567, guid: de49dcc00e4bbaf49a1fb775a36343a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8082410947624374009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &285317410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285317408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf8456b681e3f24d973c6456e81f441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spheres: []
+  SphereIdentifiers: []
+  YellowS: {fileID: 0}
+  RedS: {fileID: 0}
+  BlueS: {fileID: 0}
+  PinkS: {fileID: 0}
+  OrangeS: {fileID: 0}
+  GreenS: {fileID: 0}
+  PurpleS: {fileID: 0}
+  s1: {fileID: 0}
+  s2: {fileID: 0}
+  s3: {fileID: 0}
+  s4: {fileID: 0}
+  s5: {fileID: 0}
+  S1: {fileID: 0}
+  S2: {fileID: 0}
+  S3: {fileID: 0}
+  S4: {fileID: 0}
+  S5: {fileID: 0}
+  YellowIdent: {fileID: 0}
+  RedIdent: {fileID: 0}
+  BlueIdent: {fileID: 0}
+  PinkIdent: {fileID: 0}
+  OrangeIdent: {fileID: 0}
+  GreenIdent: {fileID: 0}
+  PurpleIdent: {fileID: 0}
+  spawnCTRL: 0
+  t: 0
 --- !u!1 &334272153
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334272153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 10.67, z: 4.17}
+  m_LocalPosition: {x: -4, y: 11, z: 4.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5947,7 +6039,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833795757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 10.67, z: 4.17}
+  m_LocalPosition: {x: -2, y: 11, z: 4.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6052,6 +6144,52 @@ MonoBehaviour:
   _startScale: 1
   _scaleMultiplier: 4
   _userBuffer: 1
+--- !u!1 &961359492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7372766401906083159, guid: 616af7900379fc44683b5ce6a69e5d24,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687881469825621130}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &961359494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961359492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf8456b681e3f24d973c6456e81f441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spheres: []
+  SphereIdentifiers: []
+  YellowS: {fileID: 0}
+  RedS: {fileID: 0}
+  BlueS: {fileID: 0}
+  PinkS: {fileID: 0}
+  OrangeS: {fileID: 0}
+  GreenS: {fileID: 0}
+  PurpleS: {fileID: 0}
+  s1: {fileID: 0}
+  s2: {fileID: 0}
+  s3: {fileID: 0}
+  s4: {fileID: 0}
+  s5: {fileID: 0}
+  S1: {fileID: 0}
+  S2: {fileID: 0}
+  S3: {fileID: 0}
+  S4: {fileID: 0}
+  S5: {fileID: 0}
+  YellowIdent: {fileID: 0}
+  RedIdent: {fileID: 0}
+  BlueIdent: {fileID: 0}
+  PinkIdent: {fileID: 0}
+  OrangeIdent: {fileID: 0}
+  GreenIdent: {fileID: 0}
+  PurpleIdent: {fileID: 0}
+  spawnCTRL: 0
+  t: 0
 --- !u!1001 &981974140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6496,7 +6634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138384132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 10.67, z: 4.17}
+  m_LocalPosition: {x: 2, y: 11, z: 4.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6524,6 +6662,52 @@ MonoBehaviour:
   _startScale: 1
   _scaleMultiplier: 4
   _userBuffer: 1
+--- !u!1 &1157587409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6027223572342953350, guid: 764460678866ef7438d6ac1dc2b86985,
+    type: 3}
+  m_PrefabInstance: {fileID: 5452839416621536562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1157587411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157587409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf8456b681e3f24d973c6456e81f441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spheres: []
+  SphereIdentifiers: []
+  YellowS: {fileID: 0}
+  RedS: {fileID: 0}
+  BlueS: {fileID: 0}
+  PinkS: {fileID: 0}
+  OrangeS: {fileID: 0}
+  GreenS: {fileID: 0}
+  PurpleS: {fileID: 0}
+  s1: {fileID: 0}
+  s2: {fileID: 0}
+  s3: {fileID: 0}
+  s4: {fileID: 0}
+  s5: {fileID: 0}
+  S1: {fileID: 0}
+  S2: {fileID: 0}
+  S3: {fileID: 0}
+  S4: {fileID: 0}
+  S5: {fileID: 0}
+  YellowIdent: {fileID: 0}
+  RedIdent: {fileID: 0}
+  BlueIdent: {fileID: 0}
+  PinkIdent: {fileID: 0}
+  OrangeIdent: {fileID: 0}
+  GreenIdent: {fileID: 0}
+  PurpleIdent: {fileID: 0}
+  spawnCTRL: 0
+  t: 0
 --- !u!1001 &1281224580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6642,6 +6826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af88b8e574f0a640861e622090dc630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubes: {fileID: 0}
 --- !u!1 &1329456577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2123090170734444168, guid: 70a152b5353dc3540a025496c0d80e7b,
@@ -6757,7 +6942,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412465783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.67, z: 4.17}
+  m_LocalPosition: {x: 0, y: 11, z: 4.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7250,6 +7435,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70a152b5353dc3540a025496c0d80e7b, type: 3}
+--- !u!1 &1829223584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6910666437523664992, guid: f188ded250694af41b2e99b67adf763b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6792865382331084426}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1829223586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829223584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf8456b681e3f24d973c6456e81f441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spheres: []
+  SphereIdentifiers: []
+  YellowS: {fileID: 0}
+  RedS: {fileID: 0}
+  BlueS: {fileID: 0}
+  PinkS: {fileID: 0}
+  OrangeS: {fileID: 0}
+  GreenS: {fileID: 0}
+  PurpleS: {fileID: 0}
+  s1: {fileID: 0}
+  s2: {fileID: 0}
+  s3: {fileID: 0}
+  s4: {fileID: 0}
+  s5: {fileID: 0}
+  S1: {fileID: 0}
+  S2: {fileID: 0}
+  S3: {fileID: 0}
+  S4: {fileID: 0}
+  S5: {fileID: 0}
+  YellowIdent: {fileID: 0}
+  RedIdent: {fileID: 0}
+  BlueIdent: {fileID: 0}
+  PinkIdent: {fileID: 0}
+  OrangeIdent: {fileID: 0}
+  GreenIdent: {fileID: 0}
+  PurpleIdent: {fileID: 0}
+  spawnCTRL: 0
+  t: 0
 --- !u!1 &1935054080
 GameObject:
   m_ObjectHideFlags: 0
@@ -7591,7 +7822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006715428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 10.67, z: 4.17}
+  m_LocalPosition: {x: 4, y: 11, z: 4.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7827,7 +8058,7 @@ PrefabInstance:
     - target: {fileID: 8265652370083467642, guid: 616af7900379fc44683b5ce6a69e5d24,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8265652370083467642, guid: 616af7900379fc44683b5ce6a69e5d24,
         type: 3}
@@ -7896,7 +8127,7 @@ PrefabInstance:
     - target: {fileID: 8953238877541854245, guid: 9ad8a5fdcc0323b40a226c8e8461b2cc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8953238877541854245, guid: 9ad8a5fdcc0323b40a226c8e8461b2cc,
         type: 3}
@@ -7965,7 +8196,7 @@ PrefabInstance:
     - target: {fileID: 7434000499274072593, guid: 764460678866ef7438d6ac1dc2b86985,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7434000499274072593, guid: 764460678866ef7438d6ac1dc2b86985,
         type: 3}
@@ -8109,7 +8340,7 @@ PrefabInstance:
     - target: {fileID: 3417475859347495988, guid: f188ded250694af41b2e99b67adf763b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3417475859347495988, guid: f188ded250694af41b2e99b67adf763b,
         type: 3}
@@ -8270,7 +8501,7 @@ PrefabInstance:
     - target: {fileID: 892153058163940795, guid: de49dcc00e4bbaf49a1fb775a36343a6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 892153058163940795, guid: de49dcc00e4bbaf49a1fb775a36343a6,
         type: 3}

@@ -65,6 +65,7 @@
     <Compile Include="Assets\AudioRecognitionAlgorithm\InstantiatCubes.cs" />
     <Compile Include="Assets\AudioRecognitionAlgorithm\paramcube.cs" />
     <Compile Include="Assets\Col\Dectection.cs" />
+    <Compile Include="Assets\Col\SphereCollision.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\examplescene.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Graphics&amp;Effects\BlinkColros.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\Losingscreen.cs" />
     <Compile Include="Assets\Mainmenu.cs" />
     <Compile Include="Assets\Movement\MoveObject.cs" />
+    <Compile Include="Assets\Spawner\SphereSpawner.cs" />
     <Compile Include="Assets\Spawner\UltimateCubeSpawner.cs" />
     <Compile Include="Assets\Tapping\CubeTouch.cs" />
     <Compile Include="Assets\Tapping\ElectricEffectOnTouch.cs" />

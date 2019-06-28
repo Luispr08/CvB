@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveObject : MonoBehaviour
 {
     public static float speed;
-    private Rigidbody cubes;
+    public Rigidbody cubes;
     // Start is called before the first frame update
     void Start()
     {
