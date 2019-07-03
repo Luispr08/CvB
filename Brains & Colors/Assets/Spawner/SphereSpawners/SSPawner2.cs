@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SphereSpawner : MonoBehaviour
+public class SSPawner2 : MonoBehaviour
 {
     //List to choose cubes from.
     public List<GameObject> spheres;
@@ -39,10 +39,11 @@ public class SphereSpawner : MonoBehaviour
     public GameObject GreenIdent;
     public GameObject PurpleIdent;
 
-    public bool spawnCTRL;
+    public static bool spawnCTRL;
     public float t = 0.0f;
 
-    
+    public static GameObject objIdent2;
+    public GameObject objIname2;
     // Start is called before the first frame update
     public void Start()
     {
@@ -86,7 +87,7 @@ public class SphereSpawner : MonoBehaviour
     public void Update()
     {
         //For testing purposes we need to specify speed here. Later on I'm gonna change it to depending the level.
-        MoveObject.speed = -5;
+        MoveObject.speed = -1;
         
         spheres = new List<GameObject> {YellowS, RedS, BlueS, GreenS, PinkS, OrangeS, PurpleS };
         SphereIdentifiers = new List<GameObject> {YellowIdent, RedIdent, BlueIdent, GreenIdent, PinkIdent, OrangeIdent, PurpleIdent};
@@ -112,18 +113,15 @@ public class SphereSpawner : MonoBehaviour
             if (t >= 1f) //Spawn after one second.
             {
                 
-                Instantiate(spheres[rand_s], this.transform.position+(new Vector3(0, 15, 0)), transform.rotation); // This will spawn sphere at position + units
-                
-                Instantiate(SphereIdentifiers[rand_i], this.transform.position, transform.rotation); //This will spawn the sphere Identifiers.
+                objIdent2 = Instantiate(spheres[rand_s], this.transform.position+(new Vector3(0, 15, 0)), transform.rotation); // This will spawn sphere at position + units
+                objIdent2.gameObject.name = "S2";
+                objIname2 = Instantiate(SphereIdentifiers[rand_i], this.transform.position, transform.rotation); //This will spawn the sphere Identifiers.
+                objIname2.gameObject.name = "S2I";
                 spawnCTRL = false;
             }
         t = t % 1;
 
-            if (spheres[rand_s].tag.Length ==0)
-            {
-                spawnCTRL = true;
-            }
-          
+    
         }
       
     }

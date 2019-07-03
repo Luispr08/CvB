@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 1169460683442139179}
   - component: {fileID: 2645571411533918959}
   - component: {fileID: 1290666700046789091}
-  - component: {fileID: 1616198887664109110}
+  - component: {fileID: 9176377997760524075}
+  - component: {fileID: 1208564216077234621}
   m_Layer: 0
   m_Name: RedSphere
   m_TagString: RedS
@@ -123,7 +124,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &1616198887664109110
+--- !u!114 &9176377997760524075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,6 +133,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 7590881177704752566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1695a31a8a2da154a9e9984b1ea2b325, type: 3}
+  m_Script: {fileID: 11500000, guid: ed9935a0c2e139e48a7c7f3279c0c201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1208564216077234621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590881177704752566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c145b327a1db3449a21c76fccc8a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  O1: {fileID: 0}
+  O2: {fileID: 0}
+  O3: {fileID: 0}
+  O4: {fileID: 0}
+  O5: {fileID: 0}
+  OB1: {fileID: 0}
+  OB2: {fileID: 0}
+  OB3: {fileID: 0}
+  OB4: {fileID: 0}
+  OB5: {fileID: 0}
