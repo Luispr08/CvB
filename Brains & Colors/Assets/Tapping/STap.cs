@@ -20,17 +20,18 @@ public class STap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        O1 = GameObject.Find("S1I");
-        O2 = GameObject.Find("S2I");
-        O3 = GameObject.Find("S3I");
-        O4 = GameObject.Find("S4I");
-        O5 = GameObject.Find("S5I");
-     }
+        
+    }
 
     // Update is called once per frame
     void Update()
     {
         //check if the object spawned.
+        O1 = GameObject.Find("S1I");
+        O2 = GameObject.Find("S2I");
+        O3 = GameObject.Find("S3I");
+        O4 = GameObject.Find("S4I");
+        O5 = GameObject.Find("S5I");
         if (O1 != null)
         {
             OB1 = O1;
@@ -52,16 +53,37 @@ public class STap : MonoBehaviour
             OB5 = O5;
         }
 
+       
     }
-    public void OnMouseDown()
+    public void OnMouseDown()//THE PROBLEM IS THE DESIGNATION OF NAMES AT OX GAMEOBJECT FIND THAT IS THE PROBLEM. FIX IT! 
     {
-        var obj = this.gameObject;
+        string n1 = "";
+        string n2 = "";
+        string n3 = "";
+        string n4 = "";
+        string n5 = "";
+         var obj = this.gameObject;
         int x = 0;
-        string n1 = OB1.name;
-        string n2 = OB2.name;
-        string n3 = OB3.name;
-        string n4 = OB4.name;
-        string n5 = OB5.name;
+        if(OB1 !=null)
+        {
+             n1 = OB1.name;
+        }
+        if (OB2 != null)
+        {
+             n2 = OB2.name;
+        }
+        if (OB3 != null)
+        {
+            n3 = OB3.name;
+        }
+        if (OB4 != null)
+        {
+            n4 = OB4.name;
+        }
+        if (OB5 != null)
+        {
+            n5 = OB5.name;
+        }
         OB1.name = "";
         OB2.name = "";
         OB3.name = "";
@@ -80,24 +102,67 @@ public class STap : MonoBehaviour
             {
                 //Clicked the correct color
                 Debug.Log("right color");
-            }
+                Destroy(obj.gameObject);
+                Destroy(OB1.gameObject);
+                SSPawner1.spawnCTRL = true;
+                
+                OB2.name = n2;
+                OB3.name = n3;
+                OB4.name = n4;
+                OB5.name = n5;
+
+        }
             else if (obj.name == OB2.name && obj.tag == OB2.tag)
             {
                 Debug.Log("right color");
-            }
-            else if (obj.name == OB3.name && obj.tag == OB3.tag)
+                Destroy(obj.gameObject);
+                Destroy(OB2.gameObject);
+                SSPawner2.spawnCTRL = true;
+            OB1.name = n1;
+            OB3.name = n3;
+            OB4.name = n4;
+            OB5.name = n5;
+
+        }
+        else if (obj.name == OB3.name && obj.tag == OB3.tag)
             {
                 Debug.Log("right color");
-            }
-            else if (obj.name == OB4.name && obj.tag == OB4.tag)
+                Destroy(obj.gameObject);
+                Destroy(OB3.gameObject);
+                SSPawner3.spawnCTRL = true;
+            OB1.name = n1;
+            OB2.name = n2;
+            OB4.name = n4;
+            OB5.name = n5;
+
+        }
+        else if (obj.name == OB4.name && obj.tag == OB4.tag)
             {
                 Debug.Log("right color");
-            }
-            else if (obj.name == OB5.name && obj.tag == OB5.tag)
+                Destroy(obj.gameObject);
+                Destroy(OB4.gameObject);
+                SSPawner4.spawnCTRL = true;
+            OB1.name = n1;
+            OB2.name = n2;
+            OB3.name = n3;
+            OB5.name = n5;
+
+        }
+        else if (obj.name == OB5.name && obj.tag == OB5.tag)
             {
                 Debug.Log("right color");
-            }
-            else
+                Destroy(obj.gameObject);
+                Destroy(OB5.gameObject);
+                SSPawner5.spawnCTRL = true;
+
+                OB1.name = n1;
+                OB2.name = n2;
+                OB3.name = n3;
+                OB4.name = n4;
+               
+
+        }
+        else
             {
                 //Player loses.
                 Debug.Log("wrong color");
