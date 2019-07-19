@@ -27,15 +27,17 @@ public class Stap1 : MonoBehaviour
         Identifier5 = GameObject.Find("S5I");
     }
 
-    void OnMouseDown()
+   public void OnMouseDown()
     {
-        if(this.gameObject.name =="S1")//Means it spawned at spawnpoint 1
+        Debug.Log("You clicked S1");
+        if (this.gameObject.name =="S1")//Means it spawned at spawnpoint 1
         {
             //We clicked the right color at spawn 1.
             if (this.gameObject.tag == Identifier1.gameObject.tag && Identifier1.gameObject.name == "S1I")
             {
                 //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
                 //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                Debug.Log("Correct Color destroy S1 and spawn1");
             }
             else if(this.gameObject.tag != Identifier1.gameObject.tag && Identifier1.gameObject.name == "S1I")
             {
@@ -43,29 +45,87 @@ public class Stap1 : MonoBehaviour
                 //If this checks then player loses a life, we destroy this object, and we destroy spawn point1.
 
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
+                Debug.Log("Wrong Color destroy S1 and spawn1");
             }
             
         }
-        if (this.gameObject.name == "S2" && this.gameObject.tag == Identifier2.gameObject.tag)//Means it spawned at spawnpoint 1
+        else if (this.gameObject.name == "S2" )//Means it spawned at spawnpoint 1
         {
             //We clicked the right color at spawn 1.
+            //We clicked the right color at spawn 1.
+            if (this.gameObject.tag == Identifier1.gameObject.tag && Identifier1.gameObject.name == "S2I")
+            {
+                //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
+                //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                Debug.Log("Correct Color destroy S3 and spawn3");
+            }
+            else if (this.gameObject.tag != Identifier1.gameObject.tag && Identifier1.gameObject.name == "S2I")
+            {
+                //This means the tag is not the same meaning the color is not the same, but it is the correct spawn point object to destroy. 
+                //If this checks then player loses a life, we destroy this object, and we destroy spawn point1.
+
+                //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
+                Debug.Log("Wrong Color destroy S2 and spawn2");
+            }
         }
-        if (this.gameObject.name == "S3" && this.gameObject.tag == Identifier3.gameObject.tag)//Means it spawned at spawnpoint 1
+        else if (this.gameObject.name == "S3" )//Means it spawned at spawnpoint 1
         {
             //We clicked the right color at spawn 1.
+            //We clicked the right color at spawn 1.
+            if (this.gameObject.tag == Identifier1.gameObject.tag && Identifier1.gameObject.name == "S3I")
+            {
+                //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
+                //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                Debug.Log("Correct Color destroy S3 and spawn3");
+            }
+            else if (this.gameObject.tag != Identifier1.gameObject.tag && Identifier1.gameObject.name == "S3I")
+            {
+                //This means the tag is not the same meaning the color is not the same, but it is the correct spawn point object to destroy. 
+                //If this checks then player loses a life, we destroy this object, and we destroy spawn point1.
+
+                //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
+                Debug.Log("Wrong Color destroy S3 and spawn3");
+            }
         }
-        if (this.gameObject.name == "S4" && this.gameObject.tag == Identifier4.gameObject.tag)//Means it spawned at spawnpoint 1
+        else if (this.gameObject.name == "S4" )//Means it spawned at spawnpoint 1
         {
             //We clicked the right color at spawn 1.
+            //We clicked the right color at spawn 1.
+            if (this.gameObject.tag == Identifier1.gameObject.tag && Identifier1.gameObject.name == "S4I")
+            {
+                //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
+                //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                Debug.Log("Correct Color destroy S4 and spawn4");
+            }
+            else if (this.gameObject.tag != Identifier1.gameObject.tag && Identifier1.gameObject.name == "S4I")
+            {
+                //This means the tag is not the same meaning the color is not the same, but it is the correct spawn point object to destroy. 
+                //If this checks then player loses a life, we destroy this object, and we destroy spawn point1.
+
+                //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
+                Debug.Log("Wrong Color destroy S4 and spawn4");
+            }
         }
-        if (this.gameObject.name == "S5" && this.gameObject.tag == Identifier5.gameObject.tag)//Means it spawned at spawnpoint 1
+        else if (this.gameObject.name == "S5" )//Means it spawned at spawnpoint 1
         {
             //We clicked the right color at spawn 1.
+            //We clicked the right color at spawn 1.
+            if (this.gameObject.tag == Identifier1.gameObject.tag && Identifier1.gameObject.name == "S5I")
+            {
+                //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
+                //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                Debug.Log("Correct Color destroy S5 and spawn5");
+            }
+            else if (this.gameObject.tag != Identifier1.gameObject.tag && Identifier1.gameObject.name == "S5I")
+            {
+                //This means the tag is not the same meaning the color is not the same, but it is the correct spawn point object to destroy. 
+                //If this checks then player loses a life, we destroy this object, and we destroy spawn point1.
+
+                //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
+                Debug.Log("Wrong Color destroy S5 and spawn5");
+            }
         }
-        else
-        {
-            //Wrong color destroy the object, decrease the players lives, and destroy the Identifier. TOMORROW 
-        }
+       
 
         //Make separate if statements where you check the name of the Identifier and the tag. that way if only the tag is wrong then we know which identifier to destroy
 

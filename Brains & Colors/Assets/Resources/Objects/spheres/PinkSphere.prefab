@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 9194488079621117432}
   - component: {fileID: 2129179299502897525}
   - component: {fileID: 390684654561343807}
+  - component: {fileID: 657208057871053880}
   m_Layer: 0
   m_Name: PinkSphere
   m_TagString: PinkS
@@ -143,7 +144,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7590881177704752566}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72c145b327a1db3449a21c76fccc8a94, type: 3}
   m_Name: 
@@ -158,3 +159,20 @@ MonoBehaviour:
   OB3: {fileID: 0}
   OB4: {fileID: 0}
   OB5: {fileID: 0}
+--- !u!114 &657208057871053880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590881177704752566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918180da683ce4f4d87353d9be00dbb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Identifier1: {fileID: 0}
+  Identifier2: {fileID: 0}
+  Identifier3: {fileID: 0}
+  Identifier4: {fileID: 0}
+  Identifier5: {fileID: 0}

@@ -24,7 +24,7 @@ public class STap : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   /* void Update()
     {
         //check if the object spawned.
         O1 = GameObject.Find("S1I");
@@ -168,5 +168,5 @@ public class STap : MonoBehaviour
                 Debug.Log("wrong color");
             }
         
-    }
+    }*/
 }
