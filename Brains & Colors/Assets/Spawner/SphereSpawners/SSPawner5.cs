@@ -87,7 +87,7 @@ public class SSPawner5 : MonoBehaviour
     public void Update()
     {
         //For testing purposes we need to specify speed here. Later on I'm gonna change it to depending the level.
-        MoveObject.speed = -1;
+        MoveObject.speed = -2;
         
         spheres = new List<GameObject> {YellowS, RedS, BlueS, GreenS, PinkS, OrangeS, PurpleS };
         SphereIdentifiers = new List<GameObject> {YellowIdent, RedIdent, BlueIdent, GreenIdent, PinkIdent, OrangeIdent, PurpleIdent};
