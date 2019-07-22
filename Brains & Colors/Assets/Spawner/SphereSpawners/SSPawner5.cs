@@ -117,7 +117,7 @@ public class SSPawner5 : MonoBehaviour
                 objIdent5.gameObject.name = "S5";
                 objIname5 = Instantiate(SphereIdentifiers[rand_i], this.transform.position, transform.rotation); //This will spawn the sphere Identifiers.
                 objIname5.gameObject.name = "S5I";
-    spawnCTRL = false;
+                spawnCTRL = false;
             }
         t = t % 1;
 

@@ -21,30 +21,30 @@ public class SphereCollision4 : MonoBehaviour
     {
         if (collision.gameObject.tag == this.tag)
        {
-            if (SSPawner1.objIdent1.gameObject.name == this.gameObject.name)
+            if (collision.gameObject.name == "S1I")
             {
                 SSPawner1.spawnCTRL = true;
-               
+
             }
-            else if (SSPawner2.objIdent2.gameObject.name == this.gameObject.name)
+            else if (collision.gameObject.name == "S2I")
             {
                 SSPawner2.spawnCTRL = true;
-                
+
             }
-            else if (SSPawner3.objIdent3.gameObject.name == this.gameObject.name)
+            else if (collision.gameObject.name == "S3I")
             {
                 SSPawner3.spawnCTRL = true;
-               
+
             }
-            else if (SSPawner4.objIdent4.gameObject.name == this.gameObject.name)
+            else if (collision.gameObject.name == "S4I")
             {
                 SSPawner4.spawnCTRL = true;
-                
+
             }
-            else if (SSPawner5.objIdent5.gameObject.name == this.gameObject.name)
+            else if (collision.gameObject.name == "S5I")
             {
                 SSPawner5.spawnCTRL = true;
-                
+
             }
             //If this happens the player loses the game. This mean the player didnt click on the matching colors.
             Destroy(collision.gameObject);
@@ -53,30 +53,30 @@ public class SphereCollision4 : MonoBehaviour
         }
         else
         {
-            if (SSPawner1.objIdent1.gameObject.name == this.gameObject.name)
+            if (collision.gameObject.name == "S1I")
             {
                 SSPawner1.spawnCTRL = true;
-               
+
             }
-            else if (SSPawner2.objIdent2.gameObject.name == this.gameObject.name)
+            else if (collision.gameObject.name == "S2I")
             {
                 SSPawner2.spawnCTRL = true;
-                
+
             }
-            else if (SSPawner3.objIdent3.gameObject.name == this.gameObject.name)
+            else if (collision.gameObject.name == "S3I")
             {
                 SSPawner3.spawnCTRL = true;
-               
+
             }
-            else if (SSPawner4.objIdent4.gameObject.name == this.gameObject.name)
+            else if (collision.gameObject.name == "S4I")
             {
                 SSPawner4.spawnCTRL = true;
-               
+
             }
-            else if (SSPawner5.objIdent5.gameObject.name == this.gameObject.name)
+            else if (collision.gameObject.name == "S5I")
             {
                 SSPawner5.spawnCTRL = true;
-                
+
             }
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
