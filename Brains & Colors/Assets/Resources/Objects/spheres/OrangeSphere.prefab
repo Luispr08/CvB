@@ -171,6 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901f05c811a5cba4b9e32ac60ee9f3eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowMulti: {fileID: 4073219729450522212, guid: bd6fc9d171e807c45ab310be2e1a24e6,
+    type: 3}
   Identifier1: {fileID: 0}
   Identifier2: {fileID: 0}
   Identifier3: {fileID: 0}

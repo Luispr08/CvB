@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SphereCollision5 : MonoBehaviour
 {
-    
     //public GameObject TorF;
     // Start is called before the first frame update
     void Start()
@@ -48,6 +47,7 @@ public class SphereCollision5 : MonoBehaviour
 
             }
             //If this happens the player loses the game. This mean the player didnt click on the matching colors.
+
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
 

@@ -32,6 +32,8 @@ public class Tap : MonoBehaviour
     public static int CubeNumberTracker = 0; //This will track how many consecutive cubes has the player clicked.
     public List<GameObject> allObjectsInScene;
 
+
+
     // Start is called before the first frame update
 
     void Start()

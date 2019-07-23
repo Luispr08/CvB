@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Stap7 : MonoBehaviour
 {
+    public GameObject ShowMulti;
     public GameObject Identifier1;
     public GameObject Identifier2;
     public GameObject Identifier3;
@@ -37,6 +38,15 @@ public class Stap7 : MonoBehaviour
             {
                 //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
                 //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                Stap1.sphereNumTracker += 1;
+
+                Stap1.sphereMultiUpdater();
+
+                if (MultiplierScript.multi >= 1)
+                {
+                    var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                    MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+                }
                 Debug.Log("Correct Color destroy S1 and spawn1");
                 Destroy(this.gameObject);
                 Destroy(Identifier1);
@@ -49,6 +59,7 @@ public class Stap7 : MonoBehaviour
                 //If this checks then player loses a life, we destroy this object, and we destroy spawn point1.
 
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
+
                 Debug.Log("Wrong Color destroy S1 and spawn1");
                 Destroy(this.gameObject);
                 Destroy(Identifier1);
@@ -64,6 +75,15 @@ public class Stap7 : MonoBehaviour
             {
                 //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
                 //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                Stap1.sphereNumTracker += 1;
+
+                Stap1.sphereMultiUpdater();
+
+                if (MultiplierScript.multi >= 1)
+                {
+                    var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                    MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+                }
                 Debug.Log("Correct Color destroy S2 and spawn2");
                 Destroy(this.gameObject);
                 Destroy(Identifier2);
@@ -89,6 +109,15 @@ public class Stap7 : MonoBehaviour
             {
                 //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
                 //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                Stap1.sphereNumTracker += 1;
+
+                Stap1.sphereMultiUpdater();
+
+                if (MultiplierScript.multi >= 1)
+                {
+                    var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                    MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+                }
                 Debug.Log("Correct Color destroy S3 and spawn3");
                 Destroy(this.gameObject);
                 Destroy(Identifier3);
@@ -114,6 +143,15 @@ public class Stap7 : MonoBehaviour
             {
                 //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
                 //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                Stap1.sphereNumTracker += 1;
+
+                Stap1.sphereMultiUpdater();
+
+                if (MultiplierScript.multi >= 1)
+                {
+                    var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                    MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+                }
                 Debug.Log("Correct Color destroy S4 and spawn4");
                 Destroy(this.gameObject);
                 Destroy(Identifier4);
@@ -139,6 +177,15 @@ public class Stap7 : MonoBehaviour
             {
                 //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
                 //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                Stap1.sphereNumTracker += 1;
+
+                Stap1.sphereMultiUpdater();
+
+                if (MultiplierScript.multi >= 1)
+                {
+                    var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                    MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+                }
                 Debug.Log("Correct Color destroy S5 and spawn5");
                 Destroy(this.gameObject);
                 Destroy(Identifier5);

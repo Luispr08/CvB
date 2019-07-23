@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SphereCollision1 : MonoBehaviour
 {
-    
+
     
     //public GameObject TorF;
     // Start is called before the first frame update

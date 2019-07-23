@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Stap1 : MonoBehaviour
 {
+    public static int sphereNumTracker;
+    public GameObject ShowMulti;
+
     public GameObject Identifier1;
     public GameObject Identifier2;
     public GameObject Identifier3;
@@ -37,6 +40,17 @@ public class Stap1 : MonoBehaviour
             {
                 //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
                 //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                sphereNumTracker += 1;
+
+                sphereMultiUpdater();
+
+                if (MultiplierScript.multi >= 1)
+                {
+                    var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                    MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+                }
+
+
                 Debug.Log("Correct Color destroy S1 and spawn1");
                 Destroy(this.gameObject);
                 Destroy(Identifier1);
@@ -50,6 +64,13 @@ public class Stap1 : MonoBehaviour
 
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
                 Debug.Log("Wrong Color destroy S1 and spawn1");
+
+                sphereNumTracker = 0;
+
+                LivesScript.lives -= 1;
+
+                MultiplierScript.multi = 0;
+
                 Destroy(this.gameObject);
                 Destroy(Identifier1);
                 SSPawner1.spawnCTRL = true;
@@ -64,6 +85,17 @@ public class Stap1 : MonoBehaviour
             {
                 //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
                 //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                sphereNumTracker += 1;
+
+                sphereMultiUpdater();
+
+                if (MultiplierScript.multi >= 1)
+                {
+                    var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                    MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+                }
+
+
                 Debug.Log("Correct Color destroy S2 and spawn2");
                 Destroy(this.gameObject);
                 Destroy(Identifier2);
@@ -76,6 +108,11 @@ public class Stap1 : MonoBehaviour
 
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
                 Debug.Log("Wrong Color destroy S2 and spawn2");
+                sphereNumTracker = 0;
+
+                LivesScript.lives -= 1;
+
+                MultiplierScript.multi = 0;
                 Destroy(this.gameObject);
                 Destroy(Identifier2);
                 SSPawner2.spawnCTRL = true;
@@ -89,6 +126,16 @@ public class Stap1 : MonoBehaviour
             {
                 //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
                 //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                sphereNumTracker += 1;
+
+                sphereMultiUpdater();
+
+                if (MultiplierScript.multi >= 1)
+                {
+                    var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                    MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+                }
+
                 Debug.Log("Correct Color destroy S3 and spawn3");
                 Destroy(this.gameObject);
                 Destroy(Identifier3);
@@ -100,6 +147,11 @@ public class Stap1 : MonoBehaviour
                 //If this checks then player loses a life, we destroy this object, and we destroy spawn point1.
 
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
+                sphereNumTracker = 0;
+
+                LivesScript.lives -= 1;
+
+                MultiplierScript.multi = 0;
                 Debug.Log("Wrong Color destroy S3 and spawn3");
                 Destroy(this.gameObject);
                 Destroy(Identifier3);
@@ -114,6 +166,16 @@ public class Stap1 : MonoBehaviour
             {
                 //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
                 //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                sphereNumTracker += 1;
+
+                sphereMultiUpdater();
+
+                if (MultiplierScript.multi >= 1)
+                {
+                    var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                    MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+                }
+
                 Debug.Log("Correct Color destroy S4 and spawn4");
                 Destroy(this.gameObject);
                 Destroy(Identifier4);
@@ -126,6 +188,13 @@ public class Stap1 : MonoBehaviour
 
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
                 Debug.Log("Wrong Color destroy S4 and spawn4");
+
+                sphereNumTracker = 0;
+
+                LivesScript.lives -= 1;
+
+                MultiplierScript.multi = 0;
+
                 Destroy(this.gameObject);
                 Destroy(Identifier4);
                 SSPawner4.spawnCTRL = true;
@@ -139,6 +208,16 @@ public class Stap1 : MonoBehaviour
             {
                 //Now we know is the correct tag meaning same color and we know is the correct identifier at spawn point 1;
                 //If this checks, player gets points, we destroy this object, and we destroy spawn point 1.
+                sphereNumTracker += 1;
+
+                sphereMultiUpdater();
+
+                if (MultiplierScript.multi >= 1)
+                {
+                    var MultiNumber = Instantiate(ShowMulti, transform.position, transform.rotation);
+                    MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
+                }
+
                 Debug.Log("Correct Color destroy S5 and spawn5");
                 Destroy(this.gameObject);
                 Destroy(Identifier5);
@@ -151,6 +230,12 @@ public class Stap1 : MonoBehaviour
 
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
                 Debug.Log("Wrong Color destroy S5 and spawn5");
+                sphereNumTracker = 0;
+
+                LivesScript.lives -= 1;
+
+                MultiplierScript.multi = 0;
+
                 Destroy(this.gameObject);
                 Destroy(Identifier5);
                 SSPawner5.spawnCTRL = true;
@@ -160,5 +245,33 @@ public class Stap1 : MonoBehaviour
 
         //Make separate if statements where you check the name of the Identifier and the tag. that way if only the tag is wrong then we know which identifier to destroy
 
+    }
+
+    public static void sphereMultiUpdater()//This function will be in charge of keeping track and updating the score for the sphere phase.
+    {
+        if (sphereNumTracker < 5)
+        {
+            ScoreScript.score += 200;
+        }
+        else if (sphereNumTracker >= 5 && sphereNumTracker < 10)
+        {
+            ScoreScript.score += 400;
+            MultiplierScript.multi = 2;
+        }
+        else if (sphereNumTracker >= 10 && sphereNumTracker < 15)
+        {
+            ScoreScript.score += 600;
+            MultiplierScript.multi = 3;
+        }
+        else if (sphereNumTracker >= 15 && sphereNumTracker < 20)
+        {
+            ScoreScript.score += 800;
+            MultiplierScript.multi = 4;
+        }
+        else if (sphereNumTracker >= 20 && sphereNumTracker < 30)
+        {
+            ScoreScript.score += 1500;
+            MultiplierScript.multi = 5;
+        }
     }
 }
