@@ -47,7 +47,11 @@ public class SphereCollision5 : MonoBehaviour
 
             }
             //If this happens the player loses the game. This mean the player didnt click on the matching colors.
+            Stap1.sphereNumTracker = 0;
 
+            LivesScript.lives -= 1;
+
+            MultiplierScript.multi = 0;
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
 

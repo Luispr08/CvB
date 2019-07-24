@@ -61,6 +61,11 @@ public class Stap7 : MonoBehaviour
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
 
                 Debug.Log("Wrong Color destroy S1 and spawn1");
+                Stap1.sphereNumTracker = 0;
+
+                LivesScript.lives -= 1;
+
+                MultiplierScript.multi = 0;
                 Destroy(this.gameObject);
                 Destroy(Identifier1);
                 SSPawner1.spawnCTRL = true;
@@ -96,6 +101,11 @@ public class Stap7 : MonoBehaviour
 
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
                 Debug.Log("Wrong Color destroy S2 and spawn2");
+                Stap1.sphereNumTracker = 0;
+
+                LivesScript.lives -= 1;
+
+                MultiplierScript.multi = 0;
                 Destroy(this.gameObject);
                 Destroy(Identifier2);
                 SSPawner2.spawnCTRL = true;
@@ -130,6 +140,11 @@ public class Stap7 : MonoBehaviour
 
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
                 Debug.Log("Wrong Color destroy S3 and spawn3");
+                Stap1.sphereNumTracker = 0;
+
+                LivesScript.lives -= 1;
+
+                MultiplierScript.multi = 0;
                 Destroy(this.gameObject);
                 Destroy(Identifier3);
                 SSPawner3.spawnCTRL = true;
@@ -164,6 +179,11 @@ public class Stap7 : MonoBehaviour
 
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
                 Debug.Log("Wrong Color destroy S4 and spawn4");
+                Stap1.sphereNumTracker = 0;
+
+                LivesScript.lives -= 1;
+
+                MultiplierScript.multi = 0;
                 Destroy(this.gameObject);
                 Destroy(Identifier4);
                 SSPawner4.spawnCTRL = true;
@@ -198,6 +218,11 @@ public class Stap7 : MonoBehaviour
 
                 //**NOTE TO SELF** IF NONE OF THESE CHECK THAT MEANS THAT EITHER THIS OBJECT IS NOT AT SPAWN POINT 1.
                 Debug.Log("Wrong Color destroy S5 and spawn5");
+                Stap1.sphereNumTracker = 0;
+
+                LivesScript.lives -= 1;
+
+                MultiplierScript.multi = 0;
                 Destroy(this.gameObject);
                 Destroy(Identifier5);
                 SSPawner5.spawnCTRL = true;

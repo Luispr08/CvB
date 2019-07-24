@@ -256,22 +256,22 @@ public class Stap1 : MonoBehaviour
         else if (sphereNumTracker >= 5 && sphereNumTracker < 10)
         {
             ScoreScript.score += 400;
-            MultiplierScript.multi = 2;
+            MultiplierScript.multi = 4;
         }
         else if (sphereNumTracker >= 10 && sphereNumTracker < 15)
         {
             ScoreScript.score += 600;
-            MultiplierScript.multi = 3;
+            MultiplierScript.multi = 6;
         }
         else if (sphereNumTracker >= 15 && sphereNumTracker < 20)
         {
             ScoreScript.score += 800;
-            MultiplierScript.multi = 4;
+            MultiplierScript.multi = 8;
         }
         else if (sphereNumTracker >= 20 && sphereNumTracker < 30)
         {
             ScoreScript.score += 1500;
-            MultiplierScript.multi = 5;
+            MultiplierScript.multi = 15;
         }
     }
 }
