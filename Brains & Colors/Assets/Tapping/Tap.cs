@@ -133,10 +133,15 @@ public class Tap : MonoBehaviour
             }
 
             Destroy(this.gameObject);
-            
-            
-            UltimateCubeSpawner.SpawnCTRL = true; //Tells the UltimateCubeSpawner that all the cubes un the scene have been destroyed so spawning new cubes and a new identifier is safe.
 
+            if (Levels.Disabler == 0)
+            {
+                UltimateCubeSpawner.SpawnCTRL = true; //Tells the UltimateCubeSpawner that all the cubes un the scene have been destroyed so spawning new cubes and a new identifier is safe.
+            }
+            if(Levels.Disabler==1)
+            {
+                Levels.setter = 1; 
+            }
         }
       else if (OBJ.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(OBJ.tag).Length > 2) //If this conditioned is met that means there is more than one cube of the same color as the identifier therefore I need to delete this one cube and update stats.
         {

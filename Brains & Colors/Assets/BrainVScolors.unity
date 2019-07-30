@@ -235,8 +235,8 @@ MonoBehaviour:
   OrangeIdent: {fileID: 0}
   GreenIdent: {fileID: 0}
   PurpleIdent: {fileID: 0}
-  spawnCTRL: 0
   t: 0
+  objIname2: {fileID: 0}
 --- !u!1 &151802986
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 219705912}
   - component: {fileID: 219705911}
+  - component: {fileID: 219705913}
   m_Layer: 0
   m_Name: GameControllerObject
   m_TagString: Untagged
@@ -390,7 +391,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219705910}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efd3fda0cf94c2d4b83508493861b3d6, type: 3}
   m_Name: 
@@ -434,6 +435,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &219705913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219705910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e2e6306b7f4fa488fc372b76d57235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &231153246
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,9 +616,8 @@ MonoBehaviour:
   OrangeIdent: {fileID: 0}
   GreenIdent: {fileID: 0}
   PurpleIdent: {fileID: 0}
-  spawnCTRL: 0
   t: 0
-  InsSphere: {fileID: 0}
+  objIname1: {fileID: 0}
 --- !u!1 &334272153
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,8 +6201,8 @@ MonoBehaviour:
   OrangeIdent: {fileID: 0}
   GreenIdent: {fileID: 0}
   PurpleIdent: {fileID: 0}
-  spawnCTRL: 0
   t: 0
+  objIname5: {fileID: 0}
 --- !u!1001 &981974140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6707,8 +6719,8 @@ MonoBehaviour:
   OrangeIdent: {fileID: 0}
   GreenIdent: {fileID: 0}
   PurpleIdent: {fileID: 0}
-  spawnCTRL: 0
   t: 0
+  objIname3: {fileID: 0}
 --- !u!1001 &1281224580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7480,8 +7492,8 @@ MonoBehaviour:
   OrangeIdent: {fileID: 0}
   GreenIdent: {fileID: 0}
   PurpleIdent: {fileID: 0}
-  spawnCTRL: 0
   t: 0
+  objIname4: {fileID: 0}
 --- !u!1 &1935054080
 GameObject:
   m_ObjectHideFlags: 0
@@ -8064,7 +8076,7 @@ PrefabInstance:
     - target: {fileID: 8265652370083467642, guid: 616af7900379fc44683b5ce6a69e5d24,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.17
+      value: 2.2999997
       objectReference: {fileID: 0}
     - target: {fileID: 8265652370083467642, guid: 616af7900379fc44683b5ce6a69e5d24,
         type: 3}
@@ -8133,7 +8145,7 @@ PrefabInstance:
     - target: {fileID: 8953238877541854245, guid: 9ad8a5fdcc0323b40a226c8e8461b2cc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.17
+      value: 2.2999997
       objectReference: {fileID: 0}
     - target: {fileID: 8953238877541854245, guid: 9ad8a5fdcc0323b40a226c8e8461b2cc,
         type: 3}
@@ -8202,7 +8214,7 @@ PrefabInstance:
     - target: {fileID: 7434000499274072593, guid: 764460678866ef7438d6ac1dc2b86985,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.17
+      value: 2.2999997
       objectReference: {fileID: 0}
     - target: {fileID: 7434000499274072593, guid: 764460678866ef7438d6ac1dc2b86985,
         type: 3}
@@ -8346,7 +8358,7 @@ PrefabInstance:
     - target: {fileID: 3417475859347495988, guid: f188ded250694af41b2e99b67adf763b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.17
+      value: 2.2999997
       objectReference: {fileID: 0}
     - target: {fileID: 3417475859347495988, guid: f188ded250694af41b2e99b67adf763b,
         type: 3}
@@ -8507,7 +8519,7 @@ PrefabInstance:
     - target: {fileID: 892153058163940795, guid: de49dcc00e4bbaf49a1fb775a36343a6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.17
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 892153058163940795, guid: de49dcc00e4bbaf49a1fb775a36343a6,
         type: 3}

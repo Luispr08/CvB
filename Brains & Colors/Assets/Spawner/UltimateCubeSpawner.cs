@@ -100,6 +100,7 @@ public class UltimateCubeSpawner : MonoBehaviour
         RectangleIdentifiers = new List<GameObject> { YellowRectangle, RedRectangle, BlueRectangle, PinkRectangle, OrangeRectangle, GreenRectangle, PurpleRectangle };
         SpawnedIndexes = new List<int>();
         int obj = 0 ;
+
         
         //Now that I have this list I have to develop a way to spawn these cubes once, or more than once. Basically I have to control how many times can we spawn the same color (depending on level!)
         if (SpawnCTRL == true)
@@ -229,6 +230,10 @@ public class UltimateCubeSpawner : MonoBehaviour
         else if (ScoreScript.score >= 60000 && ScoreScript.score <= 100000)
         {
             Levels.level4();
+        }
+        if(ScoreScript.score >300)
+        {
+            Levels.level5();
         }
     }
     

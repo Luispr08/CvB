@@ -4,11 +4,39 @@ using UnityEngine;
 
 public class Levels : MonoBehaviour
 {
+    public static int Disabler =0;
+    public static int setter = 0;
+    void Awake()
+    {
+    }
     //Level scripts are controlled by the score of the user. 
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+    void Update()
+    {
+        if (ScoreScript.score >= 4000 && ScoreScript.score <  5000)
+        {
+            level6S();
+        }
+        else if (ScoreScript.score >= 5000 && ScoreScript.score <6000)
+        {
+            level7S();
+        }
+        else if (ScoreScript.score >= 6000 && ScoreScript.score < 7000)
+        {
+            level8S();
+        }
+        else if (ScoreScript.score >= 7000 && ScoreScript.score <8000)
+        {
+            level9S();
+        }
+        else if (ScoreScript.score >= 8000)
+        {
+            level10S();
+        }
     }
     //First I want to write down what each level should do to challenge the user. I have to recognize the score and find out what scores fit the level correctly and its challenge.
 
@@ -29,7 +57,6 @@ public class Levels : MonoBehaviour
         {
             UltimateCubeSpawner.LVL = 3; //We spawn 3 cubes.
             MoveObject.speed = -2.5f;
-
         }
         else if (ScoreScript.score >= 500 && ScoreScript.score < 2000)//If the player is between 500 & 1000
         {
@@ -101,16 +128,37 @@ public class Levels : MonoBehaviour
     }
     public static void level5()
     {
+        Disabler = 1;
+    }
 
+    public static void level6S()
+    {
+        MoveObject.speed = -3.5f;
+    }
+    public static void level7S()
+    {
+        MoveObject.speed = -5f;
+    }
+    public static void level8S()
+    {
+        MoveObject.speed = -6f;
+    }
+    public static void level9S()
+    {
+        MoveObject.speed = -8f;
+    }
+    public static void level10S()
+    {
+        MoveObject.speed = -10f;
     }
 
     /*
      * IDEAS:
      * Instead of spawning 5 cubes at the beginning spawn 3 and the in a fast fashion increase to 5 cubes at a time.
      */
-     /*IMPORTANT NOTES ABOUT THIS SCRIPT
-      * global variables (static) and changes that are done through here are permanent and unless they are executed again they wont change.
-      * So it is safe to make a change and assume it will stay like that until I decide to change it. For example if I change speed from -2 to -4 the speed will remain -4 Until 
-      * the end of the execution of the game.
-      */
+    /*IMPORTANT NOTES ABOUT THIS SCRIPT
+     * global variables (static) and changes that are done through here are permanent and unless they are executed again they wont change.
+     * So it is safe to make a change and assume it will stay like that until I decide to change it. For example if I change speed from -2 to -4 the speed will remain -4 Until 
+     * the end of the execution of the game.
+     */
 }

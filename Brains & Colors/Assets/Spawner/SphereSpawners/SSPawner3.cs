@@ -86,43 +86,46 @@ public class SSPawner3 : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        //For testing purposes we need to specify speed here. Later on I'm gonna change it to depending the level.
-        MoveObject.speed = -2;
-        
-        spheres = new List<GameObject> {YellowS, RedS, BlueS, GreenS, PinkS, OrangeS, PurpleS };
-        SphereIdentifiers = new List<GameObject> {YellowIdent, RedIdent, BlueIdent, GreenIdent, PinkIdent, OrangeIdent, PurpleIdent};
-        //Each sphere and spawn point have to have their own timer so that they can spawn faster or slower depending on their randomized time.
-        //Spawn a sphere and its corresponding identifier.
-        int rand_i;
-        int rand_s = Random.Range(0, spheres.Count); //Chooses a sphere
+        if (Levels.setter == 1)
+        {
+            //For testing purposes we need to specify speed here. Later on I'm gonna change it to depending the level.
+            //MoveObject.speed = -2;
 
-        int yesorno = Random.Range(0, 3);
-        if (yesorno == 0) //1 out of 4 should be equal.
-        {
-            rand_i = rand_s;
-        }
-        else
-        {
-            rand_i = Random.Range(0, SphereIdentifiers.Count); //Chooses a spawn point color.
-        }
-        if (spawnCTRL == true) //If this is true then we want to spawn 
-        {
-            t += Time.deltaTime;
-            
+            spheres = new List<GameObject> { YellowS, RedS, BlueS, GreenS, PinkS, OrangeS, PurpleS };
+            SphereIdentifiers = new List<GameObject> { YellowIdent, RedIdent, BlueIdent, GreenIdent, PinkIdent, OrangeIdent, PurpleIdent };
+            //Each sphere and spawn point have to have their own timer so that they can spawn faster or slower depending on their randomized time.
+            //Spawn a sphere and its corresponding identifier.
+            int rand_i;
+            int rand_s = Random.Range(0, spheres.Count); //Chooses a sphere
 
-            if (t >= 1f) //Spawn after one second.
+            int yesorno = Random.Range(0, 3);
+            if (yesorno == 0) //1 out of 4 should be equal.
             {
-                
-                objIdent3 = Instantiate(spheres[rand_s], this.transform.position+(new Vector3(0, 15, 0)), transform.rotation); // This will spawn sphere at position + units
-                objIdent3.gameObject.name = "S3";
-                objIname3 = Instantiate(SphereIdentifiers[rand_i], this.transform.position, transform.rotation); //This will spawn the sphere Identifiers.
-                objIname3.gameObject.name = "S3I";
-                spawnCTRL = false;
+                rand_i = rand_s;
             }
-        t = t % 1;
+            else
+            {
+                rand_i = Random.Range(0, SphereIdentifiers.Count); //Chooses a spawn point color.
+            }
+            if (spawnCTRL == true) //If this is true then we want to spawn 
+            {
+                t += Time.deltaTime;
+
+
+                if (t >= 1f) //Spawn after one second.
+                {
+
+                    objIdent3 = Instantiate(spheres[rand_s], this.transform.position + (new Vector3(0, 15, 0)), transform.rotation); // This will spawn sphere at position + units
+                    objIdent3.gameObject.name = "S3";
+                    objIname3 = Instantiate(SphereIdentifiers[rand_i], this.transform.position, transform.rotation); //This will spawn the sphere Identifiers.
+                    objIname3.gameObject.name = "S3I";
+                    spawnCTRL = false;
+                }
+                t = t % 1;
+
+            }
 
         }
-      
     }
     
 

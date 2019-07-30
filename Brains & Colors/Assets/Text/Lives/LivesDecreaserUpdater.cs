@@ -25,8 +25,10 @@ public class LivesDecreaserUpdater : MonoBehaviour
             LivesScript.lives -= 1;
             
             Destroy(this.gameObject);
-            UltimateCubeSpawner.SpawnCTRL = true;
-
+            if (Levels.Disabler == 0)
+            {
+                UltimateCubeSpawner.SpawnCTRL = true;
+            }
         }
 
     }
