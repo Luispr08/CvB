@@ -231,7 +231,7 @@ public class UltimateCubeSpawner : MonoBehaviour
         {
             Levels.level4();
         }
-        if(ScoreScript.score >300)
+        if(ScoreScript.score >=100000)
         {
             Levels.level5();
         }

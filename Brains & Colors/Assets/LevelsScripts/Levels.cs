@@ -17,23 +17,23 @@ public class Levels : MonoBehaviour
     }
     void Update()
     {
-        if (ScoreScript.score >= 4000 && ScoreScript.score <  5000)
+        if (ScoreScript.score >= 100000 && ScoreScript.score <  125000)
         {
             level6S();
         }
-        else if (ScoreScript.score >= 5000 && ScoreScript.score <6000)
+        else if (ScoreScript.score >= 125000 && ScoreScript.score <150000)
         {
             level7S();
         }
-        else if (ScoreScript.score >= 6000 && ScoreScript.score < 7000)
+        else if (ScoreScript.score >= 150000 && ScoreScript.score < 185000)
         {
             level8S();
         }
-        else if (ScoreScript.score >= 7000 && ScoreScript.score <8000)
+        else if (ScoreScript.score >= 185000 && ScoreScript.score <220000)
         {
             level9S();
         }
-        else if (ScoreScript.score >= 8000)
+        else if (ScoreScript.score >= 220000)
         {
             level10S();
         }
@@ -56,13 +56,13 @@ public class Levels : MonoBehaviour
         if (ScoreScript.score >= 0 && ScoreScript.score <= 500)
         {
             UltimateCubeSpawner.LVL = 3; //We spawn 3 cubes.
-            MoveObject.speed = -2.5f;
+            MoveObject.speed = -3f;
         }
         else if (ScoreScript.score >= 500 && ScoreScript.score < 2000)//If the player is between 500 & 1000
         {
             //Increase the speed of the cubes by .5 .
             
-            MoveObject.speed = -3f; //QUESTION: WILL THE SPEED STAY THE SAME? YES IT DOES STAY THE SAME
+            MoveObject.speed = -4f; //QUESTION: WILL THE SPEED STAY THE SAME? YES IT DOES STAY THE SAME
             
             UltimateCubeSpawner.DuplicateCubes = true; //We want to have duplicate cubes here.
             
@@ -75,7 +75,7 @@ public class Levels : MonoBehaviour
         }
         else if (ScoreScript.score >= 10000 && ScoreScript.score < 20000)
         {
-            MoveObject.speed = -6f; //Increase speed a little more.
+            MoveObject.speed = -7f; //Increase speed a little more.
             UltimateCubeSpawner.DuplicateCubes = true; //We want Duplicates.
         }
         
@@ -88,12 +88,12 @@ public class Levels : MonoBehaviour
         {
             UltimateCubeSpawner.LVL = 5; //Introduce the 5th cube
             UltimateCubeSpawner.DuplicateCubes = false; //No cubes duplicates
-            MoveObject.speed = -5f; //Reduce speed by 1
+            MoveObject.speed = -6f; //Reduce speed by 1
         }
         else if (ScoreScript.score >= 25000 && ScoreScript.score < 35000)
         {
             UltimateCubeSpawner.DuplicateCubes = true; //Allow duplicates
-            MoveObject.speed = -6f; //Make them go faster
+            MoveObject.speed = -7f; //Make them go faster
         }
     }
 
@@ -108,7 +108,7 @@ public class Levels : MonoBehaviour
         else if (ScoreScript.score >= 45000 && ScoreScript.score < 60000)
         {
             UltimateCubeSpawner.DuplicateCubes = true; //Duplicates
-            MoveObject.speed = -6.5f; //Increase speed.
+            MoveObject.speed = -8f; //Increase speed.
         }
     }
 
@@ -118,12 +118,12 @@ public class Levels : MonoBehaviour
         {
             UltimateCubeSpawner.lvlctrl = 0; //Introduce purple cube
             UltimateCubeSpawner.DuplicateCubes = false; //No duplicates
-            MoveObject.speed = -7.5f;
+            MoveObject.speed = -9f;
         }
         else if (ScoreScript.score >= 75000 && ScoreScript.score < 100000)
         {
             UltimateCubeSpawner.DuplicateCubes = true; //Duplicates
-            MoveObject.speed = -9f; //Speed
+            MoveObject.speed = -10f; //Speed
         }
     }
     public static void level5()
@@ -133,23 +133,23 @@ public class Levels : MonoBehaviour
 
     public static void level6S()
     {
-        MoveObject.speed = -3.5f;
+        MoveObject.speed = -5f;
     }
     public static void level7S()
     {
-        MoveObject.speed = -5f;
+        MoveObject.speed = -7f;
     }
     public static void level8S()
     {
-        MoveObject.speed = -6f;
+        MoveObject.speed = -9f;
     }
     public static void level9S()
     {
-        MoveObject.speed = -8f;
+        MoveObject.speed = -11f;
     }
     public static void level10S()
     {
-        MoveObject.speed = -10f;
+        MoveObject.speed = -15f;
     }
 
     /*

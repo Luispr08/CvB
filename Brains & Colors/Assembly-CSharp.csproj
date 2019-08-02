@@ -88,7 +88,6 @@
     <Compile Include="Assets\Spawner\UltimateCubeSpawner.cs" />
     <Compile Include="Assets\Tapping\CubeTouch.cs" />
     <Compile Include="Assets\Tapping\ElectricEffectOnTouch.cs" />
-    <Compile Include="Assets\Tapping\STap.cs" />
     <Compile Include="Assets\Tapping\Stap1.cs" />
     <Compile Include="Assets\Tapping\Stap2.cs" />
     <Compile Include="Assets\Tapping\Stap3.cs" />
