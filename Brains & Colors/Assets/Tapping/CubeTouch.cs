@@ -54,7 +54,9 @@ public class CubeTouch : MonoBehaviour
             {
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionUpward);
             }
+            
         }
+        
 
 
     }
@@ -62,7 +64,9 @@ public class CubeTouch : MonoBehaviour
     {
 
                     pieces = GameObject.CreatePrimitive(PrimitiveType.Cube);
-
+                    pieces.tag = "smallcubes";
+                    pieces.layer = 10;
+                    pieces.GetComponent<Renderer>().material.color = this.gameObject.GetComponent<Renderer>().material.color;
                     pieces.transform.position = transform.position + new Vector3(cubesize * x, cubesize * y, cubesize * z) - cubePivot;
                     pieces.transform.localScale = new Vector3(cubesize, cubesize, cubesize);
 
@@ -71,10 +75,8 @@ public class CubeTouch : MonoBehaviour
                     pieces.GetComponent<Rigidbody>().mass = cubesize;
 
 
-
         Destroy(pieces, 2.0f);
-
     }
-
     
+
 }

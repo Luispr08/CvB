@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1613513840980594168}
   - component: {fileID: 1578089864794606621}
   - component: {fileID: 5639018560270442408}
-  - component: {fileID: 1152447125815871981}
+  - component: {fileID: 3478539591350466552}
   m_Layer: 9
   m_Name: PinkCube
   m_TagString: Pink
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af88b8e574f0a640861e622090dc630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubes: {fileID: 0}
 --- !u!114 &1578089864794606621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +168,7 @@ MonoBehaviour:
     type: 3}
   Multipliermesh: {fileID: 0}
   allObjectsInScene: []
---- !u!114 &1152447125815871981
+--- !u!114 &3478539591350466552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,9 +177,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1800444563304704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f184fb254132eca4f84fcae567611490, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f2f8a916fbf3f0488bcf0ac3d85d83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TouchEffect: {fileID: 0}
-  particleDestroyer: {fileID: 0}
-  isQuitting: 0
+  cubesize: 0.2
+  cubesinRow: 5
+  explosionForce: 50
+  explosionRadius: 5
+  explosionUpward: 0.5
+  cubesPivotDistance: 0

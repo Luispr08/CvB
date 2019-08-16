@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8337986727982909938}
   - component: {fileID: 4371397068109274641}
   - component: {fileID: 6695958490890372488}
-  - component: {fileID: 2669519486890824912}
+  - component: {fileID: 1211425012297685276}
   m_Layer: 9
   m_Name: YellowCube
   m_TagString: Yellow
@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af88b8e574f0a640861e622090dc630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubes: {fileID: 0}
 --- !u!114 &8337986727982909938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +168,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &2669519486890824912
+--- !u!114 &1211425012297685276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,9 +177,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1280487419807192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f184fb254132eca4f84fcae567611490, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f2f8a916fbf3f0488bcf0ac3d85d83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TouchEffect: {fileID: 0}
-  particleDestroyer: {fileID: 0}
-  isQuitting: 0
+  cubesize: 0.2
+  cubesinRow: 5
+  explosionForce: 50
+  explosionRadius: 5
+  explosionUpward: 0.5
+  cubesPivotDistance: 0

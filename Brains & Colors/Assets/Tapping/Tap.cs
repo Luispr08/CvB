@@ -32,6 +32,7 @@ public class Tap : MonoBehaviour
     public static int CubeNumberTracker = 0; //This will track how many consecutive cubes has the player clicked.
     public List<GameObject> allObjectsInScene;
 
+    
 
 
     // Start is called before the first frame update
@@ -62,7 +63,7 @@ public class Tap : MonoBehaviour
         allObjectsInScene = new List<GameObject> { LivesUpdater, YellowRectangle, YellowCube, RedRectangle, RedCube, BlueCube, BlueRectangle, PinkCube, PinkRectangle, OrangeCube, OrangeRectangle, GreenCube, GreenRectangle, PurpleCube, PurpleRectangle }; //List of all the objects in the scene
 
 
-
+        
     }
 
     // Update is called once per frame
@@ -132,6 +133,7 @@ public class Tap : MonoBehaviour
                 Destroy(ObjectInScene);
             }
 
+            
             Destroy(this.gameObject);
             
             if (Levels.Disabler == 0)
@@ -154,7 +156,7 @@ public class Tap : MonoBehaviour
                 MultiNumber.GetComponent<TextMesh>().text = "100X" + MultiplierScript.multi.ToString() + "!";
             }
             MultiplierUpdater();
-
+            
             Destroy(OBJ);
             
         }
@@ -167,7 +169,7 @@ public class Tap : MonoBehaviour
             CubeNumberTracker = 0; //If the player clickes the wrong cube then we reset the number of consecutive cubes clicked to ZERO. 
 
             MultiplierScript.multi = 0; //If the player clickes the wrong number we reset the multiplier to zero.
-
+            
             Destroy(OBJ);
             
         }
@@ -279,5 +281,6 @@ public class Tap : MonoBehaviour
     }
 
     
+
 
 }

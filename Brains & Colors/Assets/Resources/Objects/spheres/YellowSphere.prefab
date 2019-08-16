@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3937153666618221561}
   - component: {fileID: 3500876462572730916}
   - component: {fileID: 2462915784339481804}
+  - component: {fileID: 590273157899269353}
   m_Layer: 0
   m_Name: YellowSphere
   m_TagString: YellowS
@@ -155,3 +156,18 @@ MonoBehaviour:
   Identifier3: {fileID: 0}
   Identifier4: {fileID: 0}
   Identifier5: {fileID: 0}
+--- !u!114 &590273157899269353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590881177704752566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f184fb254132eca4f84fcae567611490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TouchEffect: {fileID: 0}
+  particleDestroyer: {fileID: 0}
+  isQuitting: 0
