@@ -109,6 +109,7 @@ public class Tap : MonoBehaviour
         // Debug.Log("Rec tag is: "+ CurrentRec.gameObject.tag);
 
         var OBJ = this.gameObject;
+
         if (OBJ.tag == CurrentRec.gameObject.tag && GameObject.FindGameObjectsWithTag(OBJ.tag).Length == 2) //If lenght is 2 or less means that there's only one cube of the same color as the rectangle and since we matched the color we can destroy all the cubes for the next wave to come in. 
         {
            
@@ -132,7 +133,6 @@ public class Tap : MonoBehaviour
                 Destro();
                 Destroy(ObjectInScene);
             }
-
             
             Destroy(this.gameObject);
             

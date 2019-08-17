@@ -132,8 +132,7 @@ public class UltimateCubeSpawner : MonoBehaviour
                     else
                     {
                         obj = Random.Range(0, Cubes.Count); //Displays all cubes.
-                    }
-
+                    } 
 
                     int s_obj = Random.Range(0, SpawnPoints.Count);//Obtain the index of the spawnpoint where we want to spawn the cube.
 
