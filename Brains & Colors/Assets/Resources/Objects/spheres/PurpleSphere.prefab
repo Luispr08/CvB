@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8249777621250408648}
   - component: {fileID: 3027644423468606874}
   - component: {fileID: 8126322213784431802}
+  - component: {fileID: 4094107604312633176}
   m_Layer: 0
   m_Name: PurpleSphere
   m_TagString: PurpleS
@@ -171,3 +172,15 @@ MonoBehaviour:
   TouchEffect: {fileID: 0}
   particleDestroyer: {fileID: 0}
   isQuitting: 0
+--- !u!122 &4094107604312633176
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590881177704752566}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294901927
+  m_Size: 1.2

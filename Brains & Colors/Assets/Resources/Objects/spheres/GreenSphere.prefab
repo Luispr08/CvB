@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2277963851306871555}
   - component: {fileID: 1908191762436251766}
   - component: {fileID: 272586927482799127}
+  - component: {fileID: 4698047154896536955}
   m_Layer: 0
   m_Name: GreenSphere
   m_TagString: GreenS
@@ -171,3 +172,15 @@ MonoBehaviour:
   TouchEffect: {fileID: 0}
   particleDestroyer: {fileID: 0}
   isQuitting: 0
+--- !u!122 &4698047154896536955
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590881177704752566}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278213120
+  m_Size: 1.2

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 9176377997760524075}
   - component: {fileID: 3699444760154557308}
   - component: {fileID: 7797986270050514344}
+  - component: {fileID: 4870624808386472373}
   m_Layer: 0
   m_Name: RedSphere
   m_TagString: RedS
@@ -171,3 +172,15 @@ MonoBehaviour:
   TouchEffect: {fileID: 0}
   particleDestroyer: {fileID: 0}
   isQuitting: 0
+--- !u!122 &4870624808386472373
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590881177704752566}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 1.2

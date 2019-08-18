@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2129179299502897525}
   - component: {fileID: 657208057871053880}
   - component: {fileID: 679416251696314218}
+  - component: {fileID: 4481640984642848632}
   m_Layer: 0
   m_Name: PinkSphere
   m_TagString: PinkS
@@ -171,3 +172,15 @@ MonoBehaviour:
   TouchEffect: {fileID: 0}
   particleDestroyer: {fileID: 0}
   isQuitting: 0
+--- !u!122 &4481640984642848632
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590881177704752566}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4288807167
+  m_Size: 1.2
